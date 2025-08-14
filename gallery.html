@@ -3,12 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery - StoragePro</title>
+    <title>Gallery - Tuff Shed Products</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Header -->
     <header>
         <div class="logo">StoragePro</div>
         <nav>
@@ -20,23 +19,36 @@
         </nav>
     </header>
 
-    <!-- Gallery Section -->
     <section id="gallery">
-        <h2>Inspiration Gallery</h2>
+        <h2>Our Products</h2>
         <p style="text-align:center; max-width:800px; margin:auto; color:#555; margin-bottom:50px;">
-            Browse through our collection of completed projects to see the possibilities and find inspiration for your own space.
+            Explore our wide range of storage solutions including sheds, garages, studios, and recreational buildings. Click to enlarge each product.
         </p>
-       <div class="gallery-grid">
-    <img src="https://via.placeholder.com/400x300?text=Project+1" alt="Project 1" class="lightbox-img">
-    <img src="https://via.placeholder.com/400x300?text=Project+2" alt="Project 2" class="lightbox-img">
-    <img src="https://via.placeholder.com/400x300?text=Project+3" alt="Project 3" class="lightbox-img">
-    <img src="https://via.placeholder.com/400x300?text=Project+4" alt="Project 4" class="lightbox-img">
-    <img src="https://via.placeholder.com/400x300?text=Project+5" alt="Project 5" class="lightbox-img">
-    <img src="https://via.placeholder.com/400x300?text=Project+6" alt="Project 6" class="lightbox-img">
-</div>
+
+        <h3>Sheds</h3>
+        <div class="gallery-grid">
+            <img src="https://www.tuffshed.com/wp-content/uploads/2023/05/Garden-Series-10x12.jpg" alt="Garden Series 10x12" class="lightbox-img">
+            <img src="https://www.tuffshed.com/wp-content/uploads/2023/05/Premier-Series-10x12.jpg" alt="Premier Series 10x12" class="lightbox-img">
+            <img src="https://www.tuffshed.com/wp-content/uploads/2023/05/Premier-PRO-Series-10x12.jpg" alt="Premier PRO Series 10x12" class="lightbox-img">
+        </div>
+
+        <h3>Garages</h3>
+        <div class="gallery-grid">
+            <img src="https://www.tuffshed.com/wp-content/uploads/2023/05/Garage-Series-10x12.jpg" alt="Garage Series 10x12" class="lightbox-img">
+            <img src="https://www.tuffshed.com/wp-content/uploads/2023/05/Studio-Series-10x12.jpg" alt="Studio Series 10x12" class="lightbox-img">
+        </div>
+
+        <h3>Studio & Recreational</h3>
+        <div class="gallery-grid">
+            <img src="https://www.tuffshed.com/wp-content/uploads/2023/05/Studio-Series-10x12.jpg" alt="Studio Series 10x12" class="lightbox-img">
+            <img src="https://www.tuffshed.com/wp-content/uploads/2023/05/Recreational-Series-10x12.jpg" alt="Recreational Series 10x12" class="lightbox-img">
+        </div>
     </section>
 
-    <!-- Footer -->
+    <div id="lightbox-modal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.8); justify-content:center; align-items:center;">
+        <img id="lightbox-img" src="" style="max-width:90%; max-height:90%; border-radius:10px;">
+    </div>
+
     <footer>
         <div>
             <a href="#">Facebook</a>
@@ -45,26 +57,22 @@
         </div>
         <p>&copy; 2025 StoragePro. All rights reserved.</p>
     </footer>
-    <!-- Lightbox Modal -->
-<div id="lightbox-modal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.8); justify-content:center; align-items:center;">
-    <img id="lightbox-img" src="" style="max-width:90%; max-height:90%; border-radius:10px;">
-</div>
-<script>
-    const lightboxImages = document.querySelectorAll('.lightbox-img');
-    const lightboxModal = document.getElementById('lightbox-modal');
-    const lightboxImg = document.getElementById('lightbox-img');
 
-    lightboxImages.forEach(img => {
-        img.addEventListener('click', () => {
-            lightboxImg.src = img.src;
-            lightboxModal.style.display = 'flex';
+    <script>
+        const lightboxImages = document.querySelectorAll('.lightbox-img');
+        const lightboxModal = document.getElementById('lightbox-modal');
+        const lightboxImg = document.getElementById('lightbox-img');
+
+        lightboxImages.forEach(img => {
+            img.addEventListener('click', () => {
+                lightboxImg.src = img.src;
+                lightboxModal.style.display = 'flex';
+            });
         });
-    });
 
-    lightboxModal.addEventListener('click', () => {
-        lightboxModal.style.display = 'none';
-    });
-</script>
-
+        lightboxModal.addEventListener('click', () => {
+            lightboxModal.style.display = 'none';
+        });
+    </script>
 </body>
 </html>
