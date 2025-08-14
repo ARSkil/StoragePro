@@ -27,13 +27,13 @@
             Browse through our collection of completed projects to see the possibilities and find inspiration for your own space.
         </p>
         <div class="gallery-grid">
-            <img src="https://via.placeholder.com/400x300?text=Project+1" alt="Project 1">
-            <img src="https://via.placeholder.com/400x300?text=Project+2" alt="Project 2">
-            <img src="https://via.placeholder.com/400x300?text=Project+3" alt="Project 3">
-            <img src="https://via.placeholder.com/400x300?text=Project+4" alt="Project 4">
-            <img src="https://via.placeholder.com/400x300?text=Project+5" alt="Project 5">
-            <img src="https://via.placeholder.com/400x300?text=Project+6" alt="Project 6">
-        </div>
+    <img src="https://via.placeholder.com/400x300?text=Project+1" alt="Project 1" class="lightbox-img">
+    <img src="https://via.placeholder.com/400x300?text=Project+2" alt="Project 2" class="lightbox-img">
+    <img src="https://via.placeholder.com/400x300?text=Project+3" alt="Project 3" class="lightbox-img">
+    <img src="https://via.placeholder.com/400x300?text=Project+4" alt="Project 4" class="lightbox-img">
+    <img src="https://via.placeholder.com/400x300?text=Project+5" alt="Project 5" class="lightbox-img">
+    <img src="https://via.placeholder.com/400x300?text=Project+6" alt="Project 6" class="lightbox-img">
+</div>
     </section>
 
     <!-- Footer -->
@@ -45,5 +45,25 @@
         </div>
         <p>&copy; 2025 StoragePro. All rights reserved.</p>
     </footer>
+    <!-- Lightbox Modal -->
+<div id="lightbox-modal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.8); justify-content:center; align-items:center;">
+    <img id="lightbox-img" src="" style="max-width:90%; max-height:90%; border-radius:10px;">
+</div>
+    <script>
+    const lightboxImages = document.querySelectorAll('.lightbox-img');
+    const lightboxModal = document.getElementById('lightbox-modal');
+    const lightboxImg = document.getElementById('lightbox-img');
+
+    lightboxImages.forEach(img => {
+        img.addEventListener('click', () => {
+            lightboxImg.src = img.src;
+            lightboxModal.style.display = 'flex';
+        });
+    });
+
+    lightboxModal.addEventListener('click', () => {
+        lightboxModal.style.display = 'none';
+    });
+</script>
 </body>
 </html>
