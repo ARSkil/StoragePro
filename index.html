@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Storage Solutions</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        /* Header */
+        header {
+            background: #fff;
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
+        header .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: #2c3e50;
+        }
+        nav a {
+            margin-left: 20px;
+            font-weight: 500;
+            color: #2c3e50;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #e67e22;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: #f7f9fc;
+            text-align: center;
+            padding: 100px 20px 60px;
+        }
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+        .hero .btn {
+            background: #e67e22;
+            color: #fff;
+            padding: 15px 30px;
+            border-radius: 5px;
+            font-weight: 500;
+            transition: background 0.3s;
+        }
+        .hero .btn:hover {
+            background: #d35400;
+        }
+
+        /* Sections */
+        section {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+        section h2 {
+            text-align: center;
+            margin-bottom: 50px;
+            font-size: 36px;
+            color: #2c3e50;
+        }
+
+        /* Services */
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        .service-card {
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+        .service-card h3 {
+            margin-bottom: 15px;
+            color: #e67e22;
+        }
+        .service-card p {
+            color: #555;
+        }
+
+        /* Process */
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 30px;
+        }
+        .step {
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+        .step h3 {
+            margin-bottom: 10px;
+            color: #e67e22;
+        }
+        .step p {
+            color: #555;
+        }
+
+        /* Personalization */
+        .personalization {
+            text-align: center;
+        }
+        .personalization p {
+            max-width: 800px;
+            margin: auto;
+            color: #555;
+        }
+
+        /* Gallery */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        /* Contact */
+        .contact form {
+            max-width: 600px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+        }
+        .contact input, .contact textarea {
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+        .contact button {
+            background: #e67e22;
+            color: #fff;
+            padding: 15px;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .contact button:hover {
+            background: #d35400;
+        }
+
+        /* Footer */
+        footer {
+            background: #2c3e50;
+            color: #fff;
+            text-align: center;
+            padding: 30px 20px;
+        }
+        footer a {
+            color: #e67e22;
+            margin: 0 10px;
+        }
+        footer p {
+            margin-top: 15px;
+            font-size: 14px;
+        }
+
+        /* Responsive */
+        @media(max-width: 768px){
+            .hero h1 {
+                font-size: 36px;
+            }
+            .hero p {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">StoragePro</div>
+        <nav>
+            <a href="#hero">Home</a>
+            <a href="#services">Services</a>
+            <a href="#process">Process</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <h1>Custom Storage Solutions Tailored to Your Needs</h1>
+        <p>From backyard sheds to expansive garages, we craft durable and stylish structures that fit your lifestyle.</p>
+        <a href="#contact" class="btn">Get Started</a>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <h2>Our Services</h2>
+        <div class="services">
+            <div class="service-card">
+                <h3>Custom Sheds</h3>
+                <p>Designed to fit seamlessly into your backyard, offering both functionality and aesthetic appeal.</p>
+            </div>
+            <div class="service-card">
+                <h3>Spacious Garages</h3>
+                <p>Perfect for vehicles, workshops, or additional storage, built to withstand the elements.</p>
+            </div>
+            <div class="service-card">
+                <h3>Recreational Buildings</h3>
+                <p>Transform your space into a personal retreat, whether it's a home office, studio, or hobby room.</p>
+            </div>
+            <div class="service-card">
+                <h3>Commercial Structures</h3>
+                <p>Durable and scalable solutions for businesses, from storage units to operational spaces.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="process">
+        <h2>Our Process</h2>
+        <div class="process-steps">
+            <div class="step">
+                <h3>Consultation</h3>
+                <p>Discuss your needs and preferences with our design experts.</p>
+            </div>
+            <div class="step">
+                <h3>Design & Quote</h3>
+                <p>Receive a customized design and transparent pricing.</p>
+            </div>
+            <div class="step">
+                <h3>Manufacturing</h3>
+                <p>Our skilled craftsmen build your structure using high-quality materials.</p>
+            </div>
+            <div class="step">
+                <h3>Delivery & Installation</h3>
+                <p>We handle all logistics to ensure timely and professional setup.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Personalization Section -->
+    <section id="personalization" class="personalization">
+        <h2>Express Your Style</h2>
+        <p>Choose from a wide range of colors and finishes to make your structure uniquely yours. Our partnership with top paint brands ensures vibrant and lasting results.</p>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery">
+        <h2>Inspiration Gallery</h2>
+        <div class="gallery-grid">
+            <img src="https://via.placeholder.com/400x300?text=Project+1" alt="Project 1">
+            <img src="https://via.placeholder.com/400x300?text=Project+2" alt="Project 2">
+            <img src="https://via.placeholder.com/400x300?text=Project+3" alt="Project 3">
+            <img src="https://via.placeholder.com/400x300?text=Project+4" alt="Project 4">
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2>Get in Touch</h2>
+        <form>
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div>
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+            <a href="#">LinkedIn</a>
+        </div>
+        <p>&copy; 2025 StoragePro. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
