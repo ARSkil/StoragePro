@@ -200,3 +200,7 @@ footer p {
         font-size: 18px;
     }
 }
+/* Smooth scroll for anchor links */
+html {
+    scroll-behavior: smooth;
+}
