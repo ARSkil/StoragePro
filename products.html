@@ -1,11 +1,105 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Products Gallery - StoragePro</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+
+        header {
+            background-color: #222;
+            padding: 15px 30px;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header nav a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: 500;
+        }
+
+        header nav a.active {
+            border-bottom: 2px solid #ff9800;
+        }
+
+        #products {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        #products h2 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        h4 {
+            grid-column: 1 / -1;
+            margin-top: 30px;
+            font-size: 1.2rem;
+            color: #555;
+        }
+
+        .product-card {
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            text-align: center;
+            text-decoration: none;
+            color: #333;
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .product-card img {
+            width: 100%;
+            display: block;
+        }
+
+        .product-card h4 {
+            margin: 15px 0;
+            font-size: 1rem;
+            padding: 0 10px;
+        }
+
+        .product-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+
+        footer {
+            background-color: #222;
+            color: #aaa;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+        }
+
+        footer a {
+            color: #ff9800;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+    </style>
 </head>
 <body>
     <!-- Header -->
@@ -90,27 +184,3 @@
             </a>
             <a href="pages/product-pro-barn-weekender.html" class="product-card">
                 <img src="https://www.tuffshed.com/wp-content/uploads/products/3DModels/PRO-Barn-Weekender_medium.jpg" alt="PRO Barn Weekender">
-                <h4>PRO Barn Weekender</h4>
-            </a>
-
-            <!-- STUDIOS -->
-            <h4>STUDIO & RECREATIONAL</h4>
-            <a href="pages/product-pro-studio.html" class="product-card">
-                <img src="https://www.tuffshed.com/wp-content/uploads/products/3DModels/PRO-Studio_medium.jpg" alt="PRO Studio">
-                <h4>PRO Studio</h4>
-            </a>
-
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div>
-            <a href="#">Facebook</a>
-            <a href="#">Instagram</a>
-            <a href="#">LinkedIn</a>
-        </div>
-        <p>&copy; 2025 StoragePro. All rights reserved.</p>
-    </footer>
-</body>
-</html>
