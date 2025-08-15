@@ -45,7 +45,6 @@ header {
         header nav a.active {
             border-bottom: 2px solid #ff9800;
         }
-}
 nav a {
     margin-left: 20px;
     font-weight: 500;
