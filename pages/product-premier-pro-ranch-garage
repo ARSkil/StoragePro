@@ -66,13 +66,9 @@
     <a href="../products.html" class="back-button" style="display:inline-block; margin-top:20px; padding:10px 20px; background-color:#4CAF50; color:white; text-decoration:none; border-radius:5px;">Back to Products</a>
   </div>
 </section>
-  <footer>
-    <div>
-      <a href="#">Facebook</a> |
-      <a href="#">Instagram</a> |
-      <a href="#">LinkedIn</a>
-    </div>
+ <footer>
+    <div><a href="#">Facebook</a> <a href="#">Instagram</a> <a href="#">LinkedIn</a></div>
     <p>&copy; 2025 StoragePro. All rights reserved.</p>
-  </footer>
+</footer>
 </body>
 </html>
