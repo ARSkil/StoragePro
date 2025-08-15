@@ -17,10 +17,10 @@
 
     <!-- Меню -->
     <ul class="flex space-x-6">
-      <li><a href="../index.html" class="text-gray-700 hover:text-gray-900">Home</a></li>
-      <li><a href="../services.html" class="text-gray-700 hover:text-gray-900">Services</a></li>
-      <li><a href="../products.html" class="text-gray-700 hover:text-gray-900">Products</a></li>
-      <li><a href="../contact.html" class="text-gray-700 hover:text-gray-900">Contact</a></li>
+      <a href="../index.html" class="text-gray-700 hover:text-gray-900">Home</a>
+      <a href="../services.html" class="text-gray-700 hover:text-gray-900">Services</a>
+      <a href="../products.html" class="text-gray-700 hover:text-gray-900">Products</a>
+      <a href="../contact.html" class="text-gray-700 hover:text-gray-900">Contact</a>
     </ul>
   </div>
 </nav>
