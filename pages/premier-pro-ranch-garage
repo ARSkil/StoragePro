@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Premier PRO Ranch Garage — StoragePro</title>
+  <style>
+    /* Основные стили */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      line-height: 1.6;
+    }
+    header {
+      background-color: #222;
+      color: #fff;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+    header nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: 500;
+    }
+    header nav a.active {
+      border-bottom: 2px solid #ff9800;
+    }
+    main {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    /* Карточка товара */
+    .product-detail-card {
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+    }
+    .product-detail-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .product-detail-info {
+      padding: 20px;
+    }
+    .product-detail-info h1 {
+      margin-top: 0;
+      font-size: 2rem;
+      color: #222;
+    }
+    .product-detail-info ul {
+      padding-left: 20px;
+      margin: 20px 0;
+      color: #555;
+    }
+    .product-detail-info li {
+      margin-bottom: 10px;
+    }
+    .back-button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #0069c0;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: 500;
+      transition: background-color 0.2s ease;
+    }
+    .back-button:hover {
+      background-color: #00509e;
+    }
+
+    /* Футер */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #222;
+      color: #aaa;
+      margin-top: 60px;
+      font-size: 0.9rem;
+    }
+    footer a {
+      color: #ff9800;
+      text-decoration: none;
+      margin: 0 8px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">StoragePro</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="products.html" class="active">Products</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="product-detail-card">
+      <div class="product-detail-image">
+        <img src="https://www.tuffshed.com/wp-content/uploads/products/3DModels/Premier-PRO-Garage_medium.jpg" alt="Premier PRO Ranch Garage">
+      </div>
+      <div class="product-detail-info">
+        <h1>Premier PRO Ranch Garage</h1>
+        <ul>
+          <li>Ranch-style roof with a 5/12 pitch, dimensional shingles & ridge vent</li>
+          <li>6′ 8″ clear interior wall height</li>
+          <li>LP SilverTech Radiant Barrier siding & 2×4 studs at 16″ O.C.</li>
+          <li>3′ × 6′8″ six-panel residential door</li>
+          <li>6″ boxed eaves on all walls</li>
+        </ul>
+        <a href="../products.html" class="back-button">Back to Products</a>
+      </div>
+    </div>
+  </main>
+<section class="product-page">
+  <div class="product-image">
+    <img src="https://www.tuffshed.com/wp-content/uploads/products/3DModels/Your-Large-Shed-Image.jpg" alt="Extra Large Sheds" style="width:100%; max-width:800px; margin:auto; display:block;">
+  </div>
+
+  <div class="product-info">
+    <h2>Extra Large Sheds – High Clearance</h2>
+    <p>High-clearance sheds with optional painted finish for durability and style.</p>
+
+    <table border="1" cellspacing="0" cellpadding="8" style="width:100%; border-collapse: collapse; margin-top:20px;">
+      <thead style="background-color:#f2f2f2;">
+        <tr>
+          <th>W x L x H</th>
+          <th>Base Price</th>
+          <th>Painted Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>14' X 20' X 11'7"</td><td>$18,605.00</td><td>$20,930.63</td></tr>
+        <tr><td>14' X 24' X 11'7"</td><td>$20,573.00</td><td>$23,144.63</td></tr>
+        <tr><td>16' X 20' X 12'0"</td><td>$21,218.00</td><td>$23,870.25</td></tr>
+        <tr><td>16' X 24' X 12'0"</td><td>$23,378.00</td><td>$26,300.25</td></tr>
+        <tr><td>18' X 20' X 12'5"</td><td>$22,830.00</td><td>$25,683.75</td></tr>
+        <tr><td>18' X 24' X 12'5"</td><td>$25,068.00</td><td>$28,201.50</td></tr>
+        <tr><td>20' X 20' X 12'10"</td><td>$22,349.00</td><td>$25,142.63</td></tr>
+        <tr><td>20' X 24' X 12'10"</td><td>$24,749.00</td><td>$27,842.63</td></tr>
+        <tr><td>20' X 30' X 12'10"</td><td>$28,452.00</td><td>$32,008.50</td></tr>
+        <tr><td>22' X 24' X 13'3"</td><td>$26,286.00</td><td>$29,571.75</td></tr>
+        <tr><td>24' X 20' X 13'8"</td><td>$25,772.00</td><td>$28,993.50</td></tr>
+        <tr><td>24' X 24' X 13'8"</td><td>$28,532.00</td><td>$32,098.50</td></tr>
+        <tr><td>24' X 30' X 13'8"</td><td>$32,904.00</td><td>$37,017.00</td></tr>
+      </tbody>
+    </table>
+
+    <p style="margin-top:20px;">All sheds include reinforced doors, siding, and optional painted finish for long-lasting protection.</p>
+
+    <a href="../products.html" class="back-button" style="display:inline-block; margin-top:20px; padding:10px 20px; background-color:#4CAF50; color:white; text-decoration:none; border-radius:5px;">Back to Products</a>
+  </div>
+</section>
+  <footer>
+    <div>
+      <a href="#">Facebook</a> |
+      <a href="#">Instagram</a> |
+      <a href="#">LinkedIn</a>
+    </div>
+    <p>&copy; 2025 StoragePro. All rights reserved.</p>
+  </footer>
+</body>
+</html>
