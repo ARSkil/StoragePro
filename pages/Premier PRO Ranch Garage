@@ -14,7 +14,6 @@
   <div class="max-w-6xl mx-auto flex justify-between items-center">
     <!-- Логотип -->
     <a href="../index.html" class="text-2xl font-bold text-gray-800">StoragePro</a>
-
     <!-- Меню -->
     <ul class="flex space-x-6">
       <li><a href="../index.html" class="text-gray-700 hover:text-gray-900">Home</a></li>
@@ -24,8 +23,8 @@
     </ul>
   </div>
 </nav>
-
 </header>
+
 <section class="product-page">
   <div class="product-image">
     <img src="https://www.tuffshed.com/wp-content/uploads/products/3DModels/Your-Large-Shed-Image.jpg" alt="Extra Large Sheds" style="width:100%; max-width:800px; margin:auto; display:block;">
