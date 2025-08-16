@@ -1,26 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Garden Ranch - StoragePro</title>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Garden Ranch - StoragePro</title>
+  <style>
+    /* Общие стили страницы */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    header {
+      background-color: #222;
+      color: #fff;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+    header nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: 500;
+    }
+    header nav a.active {
+      border-bottom: 2px solid #ff9800;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .product-detail-card {
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .product-detail-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .product-detail-info {
+      padding: 20px;
+    }
+
+    .product-detail-info h1 {
+      margin-top: 0;
+      font-size: 2rem;
+      color: #222;
+    }
+
+    .product-detail-info ul {
+      padding-left: 20px;
+      margin: 20px 0;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    .product-detail-info ul li {
+      margin-bottom: 10px;
+    }
+
+    .back-button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #0069c0;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: 500;
+      transition: background-color 0.2s ease;
+    }
+
+    .back-button:hover {
+      background-color: #00509e;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #222;
+      color: #aaa;
+      margin-top: 60px;
+    }
+  </style>
 </head>
 <body>
-  <!-- Header -->
-    <header>
-        <div class="logo">StoragePro</div>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="services.html">Services</a>
-            <a href="products.html" class="active">Products</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-    </header>
+  <header>
+    <div class="logo">StoragePro</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="products.html">Products</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="product-detail-card">
+      <div class="product-detail-image">
+        <img src="https://www.tuffshed.com/wp-content/uploads/2017/01/GardenRanch.png" alt="Product Garden Ranch.html">
+      
+      </div>
+      <div class="product-detail-info">
+        <h1>Product Garden Ranch</h1>
+        <ul>
+          <p>Our lowest priced factory-direct ranch shed offers Tuff Shed quality for even the budget-minded customer. The features listed below distinguish the Garden Ranch from other Tuff Shed ranch style sheds.</p>
+          <li>Ranch Style 4/12 Roof Pitch & 3-Tab Shingles</li>
+          <li>5'8" Clear Interior Sidewall Height</li>
+          <li>LP SmartSide Siding & 2x4 Wall Studs Spaced 24" On Center</li>
+          <li>6' 2" Tall Shed Door Place on End Wall (8' & 10' Wide sheds)</li>
+          <li>4" Block Sidewall Eave</li>
+        </ul>
+        <a href="../products.html" class="back-button">Back to Products</a>
+      </div>
+    </div>
+  </main>
+
+  
 <section class="product-page">
   <div class="product-image">
-    <img src="https://www.tuffshed.com/wp-content/uploads/products/3DModels/Your-Shed-Image.jpg" alt="Shed Name" style="width:100%; max-width:800px; margin:auto; display:block;">
+    <img src="..." alt="Garden Ranch" style="width:100%; max-width:800px; margin:auto; display:block;">
   </div>
 
   <div class="product-info">
