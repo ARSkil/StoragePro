@@ -1,166 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Premier PRO Ranch Garage - StoragePro</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        /* Общие стили */
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Roboto', sans-serif;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Premier Pro Ranch Garage - StoragePro</title>
+  <style>
+    /* Общие стили страницы */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+    }
 
-        body {
-            background-color: #f5f5f5;
-            color: #333;
-        }
+    header {
+      background-color: #222;
+      color: #fff;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+    header nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: 500;
+    }
+    header nav a.active {
+      border-bottom: 2px solid #ff9800;
+    }
 
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
+    main {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
 
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 50px;
-            background-color: #ffffff;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
+    .product-detail-card {
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+    }
 
-        .logo {
-            font-size: 24px;
-            font-weight: 700;
-            color: #2c3e50;
-        }
+    .product-detail-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
 
-        nav a {
-            margin-left: 30px;
-            font-weight: 500;
-            color: #2c3e50;
-            transition: color 0.3s;
-        }
+    .product-detail-info {
+      padding: 20px;
+    }
 
-        nav a:hover {
-            color: #007bff;
-        }
+    .product-detail-info h1 {
+      margin-top: 0;
+      font-size: 2rem;
+      color: #222;
+    }
 
-        main {
-            max-width: 1200px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
+    .product-detail-info ul {
+      padding-left: 20px;
+      margin: 20px 0;
+      color: #555;
+      line-height: 1.6;
+    }
 
-        .product-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 40px;
-            background-color: #fff;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        }
+    .product-detail-info ul li {
+      margin-bottom: 10px;
+    }
 
-        .product-image {
-            flex: 1 1 400px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+    .back-button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #0069c0;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: 500;
+      transition: background-color 0.2s ease;
+    }
 
-        .product-image img {
-            max-width: 100%;
-            border-radius: 10px;
-        }
+    .back-button:hover {
+      background-color: #00509e;
+    }
 
-        .product-info {
-            flex: 1 1 400px;
-        }
-
-        .product-info h1 {
-            font-size: 32px;
-            margin-bottom: 20px;
-        }
-
-        .product-info p {
-            font-size: 16px;
-            line-height: 1.6;
-            margin-bottom: 20px;
-        }
-
-        .back-button {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 12px 25px;
-            background-color: #007bff;
-            color: #fff;
-            border-radius: 6px;
-            transition: background-color 0.3s;
-        }
-
-        .back-button:hover {
-            background-color: #0056b3;
-        }
-
-        footer {
-            margin-top: 60px;
-            padding: 30px 50px;
-            text-align: center;
-            background-color: #fff;
-            box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
-        }
-
-        footer a {
-            margin: 0 10px;
-            color: #2c3e50;
-        }
-
-        footer a:hover {
-            color: #007bff;
-        }
-    </style>
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #222;
+      color: #aaa;
+      margin-top: 60px;
+    }
+  </style>
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <div class="logo">StoragePro</div>
-        <nav>
-            <a href="/index.html">Home</a>
-            <a href="/services.html">Services</a>
-            <a href="/products.html">Products</a>
-            <a href="/contact.html">Contact</a>
-        </nav>
-    </header>
+  <header>
+    <div class="logo">StoragePro</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="products.html">Products</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
 
-    <!-- Main product content -->
-    <main>
-        <div class="product-container">
-            <div class="product-image">
-                <img src="https://www.tuffshed.com/wp-content/uploads/products/3DModels/Premier-PRO-Garage_medium.jpg" alt="Premier PRO Ranch Garage">
-            </div>
-            <div class="product-info">
-                <h1>Premier PRO Ranch Garage</h1>
-                <p>
-                    The Premier PRO Ranch Garage combines high-quality construction with a versatile design. Perfect for storage, workshops, or hobby space, this garage is built with durable materials and attention to detail.
-                </p>
-                <p>
-                    Features include premium siding, reinforced framing, customizable options, and a sleek modern design to complement any property.
-                </p>
-                <a class="back-button" href="/products.html">Back to Products</a>
-            </div>
-        </div>
-    </main>
+  <main>
+    <div class="product-detail-card">
+      <div class="product-detail-image">
+        <img src="https://www.tuffshed.com/wp-content/uploads/2016/12/Premier-PRO-Ranch-Garage.png" alt="Product Premier Pro Ranch Garage.html">
+      
+      </div>
+      <div class="product-detail-info">
+        <h1>Premier Pro Ranch Garage</h1>
+        <ul>
+          <p>High-quality shed available in multiple sizes. Choose your preferred dimensions and finish.</p>
+          <li>Ranch-style roof, 5/12 pitch with dimensional shingles & ridge vent</li>
+          <li>8′ 1″ clear interior wall height</li>
+          <li>LP SilverTech Radiant Barrier siding, 2×4 studs at 16″ O.C.</li>
+          <li>3′ × 6′8″ six-panel residential door</li>
+          <li>12″ soffited eaves on all walls</li>
+        </ul>
+        <a href="../products.html" class="back-button">Back to Products</a>
+      </div>
+    </div>
+  </main>
 <section class="product-page">
   <div class="product-image">
-    <img src="https://www.tuffshed.com/wp-content/uploads/products/3DModels/Your-Large-Shed-Image.jpg" alt="Extra Large Sheds" style="width:100%; max-width:800px; margin:auto; display:block;">
+    <img src="https://www.tuffshed.com/wp-content/uploads/products/3DModels/Premier-PRO-Garage_medium.jpg" alt="Extra Large Sheds" style="width:100%; max-width:800px; margin:auto; display:block;">
   </div>
 
   <div class="product-info">
@@ -209,3 +185,5 @@
     </footer>
 </body>
 </html>
+
+
