@@ -1,33 +1,181 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Premier Ranch - StoragePro</title>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Premier Ranch - StoragePro</title>
+  <style>
+    /* Общие стили страницы */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    header {
+      background-color: #222;
+      color: #fff;
+      padding: 15px 30px;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-sizing: border-box;
+    }
+    header .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+    header nav {
+      display: flex;
+      gap: 20px;
+    }
+    header nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    header nav a.active {
+      border-bottom: 2px solid #ff9800;
+    }
+    main, .product-page {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+      box-sizing: border-box;
+    }
+    .product-detail-card {
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      width: 100%;
+      max-width: 800px;
+    }
+    .product-detail-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .product-detail-info {
+      padding: 20px;
+    }
+    .product-detail-info h1 {
+      margin-top: 0;
+      font-size: 2rem;
+      color: #222;
+    }
+    .product-detail-info p {
+      margin: 15px 0;
+      color: #555;
+      line-height: 1.6;
+    }
+    .product-detail-info ul {
+      list-style: disc;
+      padding-left: 40px;
+      text-align: left;
+      margin: 20px auto;
+      color: #555;
+      line-height: 1.6;
+      max-width: 600px;
+    }
+    .product-detail-info ul li {
+      margin-bottom: 10px;
+    }
+    .back-button {
+      display: inline-block;
+      margin: 20px auto;
+      padding: 10px 20px;
+      background-color: #0069c0;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: 500;
+      transition: background-color 0.2s ease;
+    }
+    .back-button:hover {
+      background-color: #00509e;
+    }
+    table {
+      width: 80%;
+      margin: 20px auto;
+      border-collapse: collapse;
+      text-align: center;
+      background: #fff;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    }
+    table th, table td {
+      border: 1px solid #ccc;
+      padding: 8px;
+    }
+    table thead {
+      background-color: #f2f2f2;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #222;
+      color: #aaa;
+      width: 100%;
+      margin-top: auto;
+    }
+    footer a {
+      color: #aaa;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
-  <!-- Header -->
-    <header>
-        <div class="logo">StoragePro</div>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="services.html">Services</a>
-            <a href="products.html" class="active">Products</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-    </header>
-<section class="product-page">
-  <div class="product-image">
-    <img src="https://www.tuffshed.com/wp-content/uploads/products/3DModels/Your-Shed-Image2.jpg" alt="Shed Name" style="width:100%; max-width:800px; margin:auto; display:block;">
-  </div>
-
-  <div class="product-info">
-    <h2>Shed Name</h2>
-    <p>High-quality shed available in multiple sizes. Choose your preferred dimensions and finish.</p>
-
-    <table border="1" cellspacing="0" cellpadding="8" style="width:100%; border-collapse: collapse; margin-top:20px;">
+  <header>
+    <div class="logo">StoragePro</div>
+    <nav>
+      <a href="index.html">Главная</a>
+      <a href="services.html">Услуги</a>
+      <a href="products.html">Продукты</a>
+      <a href="contact.html">Контакты</a>
+    </nav>
+  </header>
+  <main>
+    <div class="product-detail-card">
+      <div class="product-detail-image">
+        <img src="https://www.tuffshed.com/wp-content/uploads/2017/01/PremierRanch.png" alt="Premier Ranch">
+      </div>
+      <div class="product-detail-info">
+        <h1>Модель Premier Ranch</h1>
+        <p>Наши премиальные сараи серии Premier Ranch предлагают улучшенные характеристики и стильный дизайн для вашего двора.</p>
+        <ul>
+          <li>Крыша с уклоном 5/12 и черепица повышенной прочности</li>
+          <li>Высота стен 7'8" (около 2,34 м)</li>
+          <li>Сайдинг LP SilverTech с радиационным барьером и 2x4 каркас с шагом 16" по центру</li>
+          <li>Дверь 6'2" (около 1,88 м) с возможностью установки на любую стену</li>
+          <li>Широкие коробчатые карнизы (6" на всех стенах)</li>
+        </ul>
+        <a href="../products.html" class="back-button">Назад к продуктам</a>
+      </div>
+    </div>
+  </main>
+  <section class="product-page">
+    <div class="product-info">
+      <h2>Модель Premier Ranch</h2>
+      <p>Высококачественный сарай доступен в различных размерах. Выберите предпочитаемые размеры и отделку.</p>
+      <table border="1" cellspacing="0" cellpadding="8" style="width:100%; border-collapse: collapse; margin-top:20px;">
       <thead style="background-color:#f2f2f2;">
         <tr>
           <th>W x L x H</th>
@@ -59,16 +207,18 @@
         <tr><td>12' X 32' X 9'6"</td><td>$10,924.00</td><td>$12,289.50</td></tr>
       </tbody>
     </table>
-
-    <p style="margin-top:20px;">All sheds come with durable siding, customizable doors, and optional paint finishes.</p>
-
-    <a href="../products.html" class="back-button" style="display:inline-block; margin-top:20px; padding:10px 20px; background-color:#4CAF50; color:white; text-decoration:none; border-radius:5px;">Back to Products</a>
-  </div>
-</section>
-
-<footer>
-    <div><a href="#">Facebook</a> <a href="#">Instagram</a> <a href="#">LinkedIn</a></div>
-    <p>&copy; 2025 StoragePro. All rights reserved.</p>
-</footer>
+      <p>Все сараи поставляются с прочным сайдингом, настраиваемыми дверями и возможностью выбора отделки.</p>
+      <a href="../products.html" class="back-button" style="background-color:#4CAF50;">Назад к продуктам</a>
+    </div>
+  </section>
+  <footer>
+    <div>
+      <a href="#">Facebook</a>
+      <a href="#">Instagram</a>
+      <a href="#">LinkedIn</a>
+    </div>
+    <p>&copy; 2025 StoragePro. Все права защищены.</p>
+  </footer>
 </body>
 </html>
+
