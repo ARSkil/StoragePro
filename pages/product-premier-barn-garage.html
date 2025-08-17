@@ -1,6 +1,250 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Garden Ranch - StoragePro</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      background: #222;
+      color: #fff;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+    nav {
+      display: flex;
+      gap: 20px;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    nav a:hover {
+      border-bottom: 2px solid #ff9800;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 30px 15px;
+    }
+
+    .product-card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+      max-width: 900px;
+      width: 100%;
+      overflow: hidden;
+      text-align: center;
+      padding-bottom: 20px;
+    }
+
+    .product-card img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .product-info {
+      padding: 20px;
+    }
+
+    .product-info h1 {
+      margin: 0;
+      font-size: 2rem;
+      color: #222;
+    }
+
+    .product-info p {
+      margin: 15px 0;
+      line-height: 1.6;
+      color: #555;
+    }
+
+    .product-info ul {
+      text-align: left;
+      margin: 20px auto;
+      max-width: 700px;
+      line-height: 1.6;
+      color: #444;
+    }
+
+    .product-info ul li {
+      margin-bottom: 8px;
+    }
+
+    table {
+      width: 90%;
+      margin: 25px auto;
+      border-collapse: collapse;
+      background: #fff;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    }
+
+    table th, table td {
+      border: 1px solid #ccc;
+      padding: 10px;
+    }
+
+    table th {
+      background: #f2f2f2;
+    }
+
+    .back-button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background: #0069c0;
+      color: #fff;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .back-button:hover {
+      background: #00509e;
+    }
+
+    footer {
+      background: #222;
+      color: #aaa;
+      text-align: center;
+      padding: 20px;
+    }
+    footer a {
+      color: #aaa;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">StoragePro</div>
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="../services.html">Services</a>
+      <a href="../products.html">Products</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="product-card">
+      <img src="https://www.tuffshed.com/wp-content/uploads/2016/12/12x24-Premier-Barn-Garage_VIEW01.RGB_color.0000.png" alt="Garden Ranch">
+      <div class="product-info">
+        <h1>Garden Ranch</h1>
+        <p>Our lowest priced factory-direct ranch shed offers Tuff Shed quality for even the budget-minded customer. The features listed below distinguish the Garden Ranch from other Tuff Shed ranch style sheds.</p>
+        <ul>
+          <li>Ranch Style 4/12 Roof Pitch & 3-Tab Shingles</li>
+          <li>5'8" Clear Interior Sidewall Height</li>
+          <li>LP SmartSide Siding & 2x4 Wall Studs Spaced 24" On Center</li>
+          <li>6'2" Tall Shed Door Placed on End Wall (8' & 10' Wide Sheds)</li>
+          <li>4" Block Sidewall Eave</li>
+        </ul>
+
+        <h2>Available Sizes & Prices</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>W x L x H</th>
+              <th>Base Price</th>
+              <th>Painted Price</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>20' X 16' X 18'0"</td><td>$30,609.00</td><td>$34,435.13</td></tr>
+          <tr><td>20' X 18' X 18'0"</td><td>$32,771.00</td><td>$36,867.38</td></tr>
+          <tr><td>20' X 20' X 18'0"</td><td>$34,676.00</td><td>$39,010.50</td></tr>
+          <tr><td>20' X 22' X 18'0"</td><td>$36,708.00</td><td>$41,296.50</td></tr>
+          <tr><td>20' X 24' X 18'0"</td><td>$38,739.00</td><td>$43,581.38</td></tr>
+          <tr><td>20' X 26' X 18'0"</td><td>$40,773.00</td><td>$45,869.63</td></tr>
+          <tr><td>20' X 28' X 18'0"</td><td>$42,731.00</td><td>$48,072.38</td></tr>
+          <tr><td>20' X 30' X 18'0"</td><td>$44,786.00</td><td>$50,384.25</td></tr>
+          <tr><td>20' X 32' X 18'0"</td><td>$46,793.00</td><td>$52,642.13</td></tr>
+          <tr><td>20' X 34' X 18'0"</td><td>$48,801.00</td><td>$54,901.13</td></tr>
+          <tr><td>20' X 36' X 18'0"</td><td>$50,759.00</td><td>$57,103.88</td></tr>
+          <tr><td>20' X 38' X 18'0"</td><td>$52,842.00</td><td>$59,447.25</td></tr>
+          <tr><td>20' X 40' X 18'0"</td><td>$54,846.00</td><td>$61,701.75</td></tr>
+          <tr><td>22' X 16' X 19'0"</td><td>$33,548.00</td><td>$37,741.50</td></tr>
+          <tr><td>22' X 18' X 19'0"</td><td>$35,804.00</td><td>$40,279.50</td></tr>
+          <tr><td>22' X 20' X 19'0"</td><td>$38,061.00</td><td>$42,818.63</td></tr>
+          <tr><td>22' X 22' X 19'0"</td><td>$40,322.00</td><td>$45,362.25</td></tr>
+          <tr><td>22' X 24' X 19'0"</td><td>$42,528.00</td><td>$47,844.00</td></tr>
+          <tr><td>22' X 26' X 19'0"</td><td>$44,811.00</td><td>$50,412.38</td></tr>
+          <tr><td>22' X 28' X 19'0"</td><td>$47,018.00</td><td>$52,895.25</td></tr>
+          <tr><td>22' X 30' X 19'0"</td><td>$49,329.00</td><td>$55,495.13</td></tr>
+          <tr><td>22' X 32' X 19'0"</td><td>$51,512.00</td><td>$57,951.00</td></tr>
+          <tr><td>22' X 34' X 19'0"</td><td>$53,795.00</td><td>$60,519.38</td></tr>
+          <tr><td>22' X 36' X 19'0"</td><td>$56,030.00</td><td>$63,033.75</td></tr>
+          <tr><td>22' X 38' X 19'0"</td><td>$58,362.00</td><td>$65,657.25</td></tr>
+          <tr><td>22' X 40' X 19'0"</td><td>$60,393.00</td><td>$67,942.13</td></tr>
+          <tr><td>24' X 16' X 20'0"</td><td>$36,179.00</td><td>$40,701.38</td></tr>
+          <tr><td>24' X 18' X 20'0"</td><td>$38,664.00</td><td>$43,497.00</td></tr>
+          <tr><td>24' X 20' X 20'0"</td><td>$41,124.00</td><td>$46,264.50</td></tr>
+          <tr><td>24' X 22' X 20'0"</td><td>$43,683.00</td><td>$49,143.38</td></tr>
+          <tr><td>24' X 24' X 20'0"</td><td>$46,065.00</td><td>$51,823.13</td></tr>
+          <tr><td>24' X 26' X 20'0"</td><td>$48,576.00</td><td>$54,648.00</td></tr>
+          <tr><td>24' X 28' X 20'0"</td><td>$51,059.00</td><td>$57,441.38</td></tr>
+          <tr><td>24' X 30' X 20'0"</td><td>$53,543.00</td><td>$60,235.88</td></tr>
+          <tr><td>24' X 32' X 20'0"</td><td>$56,003.00</td><td>$63,003.38</td></tr>
+          <tr><td>24' X 34' X 20'0"</td><td>$58,538.00</td><td>$65,855.25</td></tr>
+          <tr><td>24' X 36' X 20'0"</td><td>$61,020.00</td><td>$68,647.50</td></tr>
+          <tr><td>24' X 38' X 20'0"</td><td>$63,503.00</td><td>$71,440.88</td></tr>
+          <tr><td>24' X 40' X 20'0"</td><td>$65,913.00</td><td>$74,152.13</td></tr>
+          </tbody>
+        </table>
+
+        <p>All sheds come with durable siding, customizable doors, and optional paint finishes.</p>
+
+        <a href="../products.html" class="back-button">Back to Products</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div>
+      <a href="#">Facebook</a>
+      <a href="#">Instagram</a>
+      <a href="#">LinkedIn</a>
+    </div>
+    <p>&copy; 2025 StoragePro. All rights reserved.</p>
+  </footer>
+</body>
+</html>
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Premier Barn Garage - StoragePro</title>
