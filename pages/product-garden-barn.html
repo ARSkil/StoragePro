@@ -13,7 +13,7 @@
       color: #333;
       display: flex;
       flex-direction: column;
-      align-items: center;
+      min-height: 100vh;
     }
 
     header {
@@ -29,10 +29,13 @@
       font-size: 1.5rem;
       font-weight: bold;
     }
+    header nav {
+      display: flex; /* 👈 фикс для меню */
+      gap: 20px;
+    }
     header nav a {
       color: #fff;
       text-decoration: none;
-      margin-left: 20px;
       font-weight: 500;
     }
     header nav a.active {
@@ -40,9 +43,14 @@
     }
 
     main {
+      flex: 1;
       max-width: 900px;
       margin: 40px auto;
       padding: 0 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center; /* 👈 контент по центру */
+      text-align: center;
     }
 
     .product-detail-card {
@@ -69,7 +77,6 @@
       margin-top: 0;
       font-size: 2rem;
       color: #222;
-      text-align: center;
     }
 
     .product-detail-info p {
@@ -79,9 +86,11 @@
 
     .product-detail-info ul {
       padding-left: 20px;
-      margin: 20px 0;
+      margin: 20px auto;
       color: #555;
       line-height: 1.6;
+      text-align: left;
+      max-width: 600px;
     }
 
     .product-detail-info ul li {
@@ -105,7 +114,7 @@
     }
 
     table {
-      width: 70%;
+      width: 80%;
       border-collapse: collapse;
       margin: 20px auto;
       text-align: center;
@@ -125,7 +134,6 @@
       padding: 20px;
       background-color: #222;
       color: #aaa;
-      margin-top: 60px;
       width: 100%;
     }
 
@@ -199,8 +207,8 @@
           <tr><td>10' X 16' X 11'6"</td><td>$5,548.00</td><td>$6,241.50</td></tr>
         </tbody>
       </table>
-      <p style="text-align:center; margin-top:20px;">All large sheds come with reinforced siding, heavy-duty doors, and optional paint finishes.</p>
-      <div style="text-align:center;">
+      <p>All large sheds come with reinforced siding, heavy-duty doors, and optional paint finishes.</p>
+      <div>
         <a href="../products.html" class="back-button" style="background-color:#4CAF50;">Back to Products</a>
       </div>
     </section>
