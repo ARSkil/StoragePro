@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Garden Barn - StoragePro</title>
+  <title>Garden Barn – StoragePro</title>
   <style>
     body {
       margin: 0;
@@ -15,22 +15,22 @@
       flex-direction: column;
       min-height: 100vh;
     }
-
     header {
-      width: 100%;
       background-color: #222;
       color: #fff;
       padding: 15px 30px;
+      width: 100%;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      box-sizing: border-box;
     }
     header .logo {
       font-size: 1.5rem;
       font-weight: bold;
     }
     header nav {
-      display: flex; /* 👈 фикс для меню */
+      display: flex;
       gap: 20px;
     }
     header nav a {
@@ -41,62 +41,54 @@
     header nav a.active {
       border-bottom: 2px solid #ff9800;
     }
-
     main {
       flex: 1;
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 0 20px;
       display: flex;
       flex-direction: column;
-      align-items: center; /* 👈 контент по центру */
-      text-align: center;
+      align-items: center;
+      padding: 40px 20px;
+      box-sizing: border-box;
     }
-
     .product-detail-card {
       background: #fff;
       border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.1);
       overflow: hidden;
-      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
-      display: flex;
-      flex-direction: column;
-      margin: 0 auto;
+      text-align: center;
+      width: 100%;
+      max-width: 800px;
+      margin-bottom: 40px;
     }
-
     .product-detail-image img {
       width: 100%;
       height: auto;
       display: block;
     }
-
     .product-detail-info {
       padding: 20px;
     }
-
     .product-detail-info h1 {
-      margin-top: 0;
+      margin: 0;
       font-size: 2rem;
       color: #222;
     }
-
     .product-detail-info p {
+      margin: 15px 0;
       color: #555;
       line-height: 1.6;
     }
-
     .product-detail-info ul {
-      padding-left: 20px;
+      text-align: left;
+      list-style: disc;
+      padding-left: 40px;
       margin: 20px auto;
       color: #555;
-      line-height: 1.6;
-      text-align: left;
       max-width: 600px;
+      line-height: 1.6;
     }
-
-    .product-detail-info ul li {
+    .product-detail-info li {
       margin-bottom: 10px;
     }
-
     .back-button {
       display: inline-block;
       margin: 20px auto 0;
@@ -108,42 +100,45 @@
       font-weight: 500;
       transition: background-color 0.2s ease;
     }
-
     .back-button:hover {
       background-color: #00509e;
     }
-
+    .product-page {
+      width: 100%;
+      max-width: 900px;
+      text-align: center;
+      padding-bottom: 40px;
+    }
     table {
       width: 80%;
-      border-collapse: collapse;
       margin: 20px auto;
+      border-collapse: collapse;
       text-align: center;
+      background: #fff;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.1);
     }
-
     table th, table td {
       border: 1px solid #ccc;
       padding: 10px;
     }
-
     table thead {
       background-color: #f2f2f2;
     }
-
     footer {
       text-align: center;
       padding: 20px;
       background-color: #222;
       color: #aaa;
       width: 100%;
+      margin-top: auto;
     }
-
     footer a {
       color: #aaa;
       margin: 0 10px;
       text-decoration: none;
     }
     footer a:hover {
-      color: #fff;
+      text-decoration: underline;
     }
   </style>
 </head>
@@ -153,7 +148,7 @@
     <nav>
       <a href="index.html">Home</a>
       <a href="services.html">Services</a>
-      <a href="products.html">Products</a>
+      <a href="products.html" class="active">Products</a>
       <a href="contact.html">Contact</a>
     </nav>
   </header>
@@ -161,17 +156,18 @@
   <main>
     <div class="product-detail-card">
       <div class="product-detail-image">
-        <img src="https://www.tuffshed.com/wp-content/uploads/2016/12/10x10-Garden-Barn.png" alt="Product Garden Barn">
+        <!-- Предполагаемое "большое" изображение продукта -->
+        <img src="https://www.tuffshed.com/wp-content/uploads/products/3DModels/Garden-Barn_medium.jpg" alt="Garden Barn">
       </div>
       <div class="product-detail-info">
-        <h1>Product Garden Barn</h1>
-        <p>High-quality shed available in multiple sizes. Choose your preferred dimensions and finish.</p>
+        <h1>Garden Barn</h1>
+        <p>Our most affordable barn-style shed that delivers Tuff Shed quality for the budget-conscious customer.</p>
         <ul>
-          <li>Ranch-style roof, 5/12 pitch with dimensional shingles & ridge vent</li>
-          <li>8′ 1″ clear interior wall height</li>
-          <li>LP SilverTech Radiant Barrier siding, 2×4 studs at 16″ O.C.</li>
-          <li>3′ × 6′8″ six-panel residential door</li>
-          <li>12″ soffited eaves on all walls</li>
+          <li>Barn Style 5/12 Roof Pitch & 3-Tab Shingles</li>
+          <li>5' 8" Clear Interior Sidewall Height</li>
+          <li>LP SmartSide Siding & 2×4 Wall Studs Spaced 24" On Center</li>
+          <li>6' 2" Tall Shed Door Placed on End Wall</li>
+          <li>3" Flat Sidewall Eave</li>
         </ul>
         <a href="../products.html" class="back-button">Back to Products</a>
       </div>
