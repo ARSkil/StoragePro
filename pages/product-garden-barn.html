@@ -5,16 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Garden Barn - StoragePro</title>
   <style>
-    /* Общие стили страницы */
     body {
       margin: 0;
       padding: 0;
       font-family: 'Roboto', sans-serif;
       background-color: #f4f4f4;
       color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
     header {
+      width: 100%;
       background-color: #222;
       color: #fff;
       padding: 15px 30px;
@@ -49,6 +52,7 @@
       box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
       display: flex;
       flex-direction: column;
+      margin: 0 auto;
     }
 
     .product-detail-image img {
@@ -65,6 +69,12 @@
       margin-top: 0;
       font-size: 2rem;
       color: #222;
+      text-align: center;
+    }
+
+    .product-detail-info p {
+      color: #555;
+      line-height: 1.6;
     }
 
     .product-detail-info ul {
@@ -80,7 +90,7 @@
 
     .back-button {
       display: inline-block;
-      margin-top: 20px;
+      margin: 20px auto 0;
       padding: 10px 20px;
       background-color: #0069c0;
       color: #fff;
@@ -94,12 +104,38 @@
       background-color: #00509e;
     }
 
+    table {
+      width: 70%;
+      border-collapse: collapse;
+      margin: 20px auto;
+      text-align: center;
+    }
+
+    table th, table td {
+      border: 1px solid #ccc;
+      padding: 10px;
+    }
+
+    table thead {
+      background-color: #f2f2f2;
+    }
+
     footer {
       text-align: center;
       padding: 20px;
       background-color: #222;
       color: #aaa;
       margin-top: 60px;
+      width: 100%;
+    }
+
+    footer a {
+      color: #aaa;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+    footer a:hover {
+      color: #fff;
     }
   </style>
 </head>
@@ -117,13 +153,12 @@
   <main>
     <div class="product-detail-card">
       <div class="product-detail-image">
-        <img src="https://www.tuffshed.com/wp-content/uploads/2016/12/10x10-Garden-Barn.png" alt="Product Garden Barn.html">
-      
+        <img src="https://www.tuffshed.com/wp-content/uploads/2016/12/10x10-Garden-Barn.png" alt="Product Garden Barn">
       </div>
       <div class="product-detail-info">
         <h1>Product Garden Barn</h1>
+        <p>High-quality shed available in multiple sizes. Choose your preferred dimensions and finish.</p>
         <ul>
-          <p>High-quality shed available in multiple sizes. Choose your preferred dimensions and finish.</p>
           <li>Ranch-style roof, 5/12 pitch with dimensional shingles & ridge vent</li>
           <li>8′ 1″ clear interior wall height</li>
           <li>LP SilverTech Radiant Barrier siding, 2×4 studs at 16″ O.C.</li>
@@ -133,48 +168,51 @@
         <a href="../products.html" class="back-button">Back to Products</a>
       </div>
     </div>
+
+    <section class="product-page">
+      <table>
+        <thead>
+          <tr>
+            <th>W x L x H</th>
+            <th>Base Price</th>
+            <th>Painted Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>6' X 6' X 9'6"</td><td>$2,090.00</td><td>$2,351.25</td></tr>
+          <tr><td>6' X 8' X 9'6"</td><td>$2,432.00</td><td>$2,736.00</td></tr>
+          <tr><td>6' X 10' X 9'6"</td><td>$2,825.00</td><td>$3,178.13</td></tr>
+          <tr><td>6' X 12' X 9'6"</td><td>$3,205.00</td><td>$3,605.63</td></tr>
+          <tr><td>6' X 14' X 9'6"</td><td>$3,636.00</td><td>$4,090.50</td></tr>
+          <tr><td>6' X 16' X 9'6"</td><td>$3,973.00</td><td>$4,469.63</td></tr>
+          <tr><td>8' X 6' X 10'6"</td><td>$2,457.00</td><td>$2,764.13</td></tr>
+          <tr><td>8' X 8' X 10'6"</td><td>$2,857.00</td><td>$3,214.13</td></tr>
+          <tr><td>8' X 10' X 10'6"</td><td>$3,298.00</td><td>$3,710.25</td></tr>
+          <tr><td>8' X 12' X 10'6"</td><td>$3,732.00</td><td>$4,198.50</td></tr>
+          <tr><td>8' X 14' X 10'6"</td><td>$4,221.00</td><td>$4,748.63</td></tr>
+          <tr><td>8' X 16' X 10'6"</td><td>$4,619.00</td><td>$5,196.38</td></tr>
+          <tr><td>10' X 6' X 11'6"</td><td>$2,962.00</td><td>$3,332.25</td></tr>
+          <tr><td>10' X 8' X 11'6"</td><td>$3,447.00</td><td>$3,877.88</td></tr>
+          <tr><td>10' X 10' X 11'6"</td><td>$3,970.00</td><td>$4,466.25</td></tr>
+          <tr><td>10' X 12' X 11'6"</td><td>$4,493.00</td><td>$5,054.63</td></tr>
+          <tr><td>10' X 14' X 11'6"</td><td>$5,068.00</td><td>$5,701.50</td></tr>
+          <tr><td>10' X 16' X 11'6"</td><td>$5,548.00</td><td>$6,241.50</td></tr>
+        </tbody>
+      </table>
+      <p style="text-align:center; margin-top:20px;">All large sheds come with reinforced siding, heavy-duty doors, and optional paint finishes.</p>
+      <div style="text-align:center;">
+        <a href="../products.html" class="back-button" style="background-color:#4CAF50;">Back to Products</a>
+      </div>
+    </section>
   </main>
-  
-<section class="product-page">
-    <table border="1" cellspacing="0" cellpadding="8" style="width:50%; border-collapse: collapse; margin: 0 auto; margin-top:20px;">
-      <thead style="background-color:#f2f2f2;">
-        <tr>
-          <th>W x L x H</th>
-          <th>Base Price</th>
-          <th>Painted Price</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr><td>6' X 6' X 9'6"</td><td>$2,090.00</td><td>$2,351.25</td></tr>
-        <tr><td>6' X 8' X 9'6"</td><td>$2,432.00</td><td>$2,736.00</td></tr>
-        <tr><td>6' X 10' X 9'6"</td><td>$2,825.00</td><td>$3,178.13</td></tr>
-        <tr><td>6' X 12' X 9'6"</td><td>$3,205.00</td><td>$3,605.63</td></tr>
-        <tr><td>6' X 14' X 9'6"</td><td>$3,636.00</td><td>$4,090.50</td></tr>
-        <tr><td>6' X 16' X 9'6"</td><td>$3,973.00</td><td>$4,469.63</td></tr>
-        <tr><td>8' X 6' X 10'6"</td><td>$2,457.00</td><td>$2,764.13</td></tr>
-        <tr><td>8' X 8' X 10'6"</td><td>$2,857.00</td><td>$3,214.13</td></tr>
-        <tr><td>8' X 10' X 10'6"</td><td>$3,298.00</td><td>$3,710.25</td></tr>
-        <tr><td>8' X 12' X 10'6"</td><td>$3,732.00</td><td>$4,198.50</td></tr>
-        <tr><td>8' X 14' X 10'6"</td><td>$4,221.00</td><td>$4,748.63</td></tr>
-        <tr><td>8' X 16' X 10'6"</td><td>$4,619.00</td><td>$5,196.38</td></tr>
-        <tr><td>10' X 6' X 11'6"</td><td>$2,962.00</td><td>$3,332.25</td></tr>
-        <tr><td>10' X 8' X 11'6"</td><td>$3,447.00</td><td>$3,877.88</td></tr>
-        <tr><td>10' X 10' X 11'6"</td><td>$3,970.00</td><td>$4,466.25</td></tr>
-        <tr><td>10' X 12' X 11'6"</td><td>$4,493.00</td><td>$5,054.63</td></tr>
-        <tr><td>10' X 14' X 11'6"</td><td>$5,068.00</td><td>$5,701.50</td></tr>
-        <tr><td>10' X 16' X 11'6"</td><td>$5,548.00</td><td>$6,241.50</td></tr>
-      </tbody>
-    </table>
 
-      <p style="margin-top:20px;">All large sheds come with reinforced siding, heavy-duty doors, and optional paint finishes.</p>
-
-    <a href="../products.html" class="back-button" style="display:inline-block; margin-top:20px; padding:10px 20px; background-color:#4CAF50; color:white; text-decoration:none; border-radius:5px;">Back to Products</a>
-  </div>
-</section>
-
-<footer>
-    <div><a href="#">Facebook</a> <a href="#">Instagram</a> <a href="#">LinkedIn</a></div>
+  <footer>
+    <div>
+      <a href="#">Facebook</a>
+      <a href="#">Instagram</a>
+      <a href="#">LinkedIn</a>
+    </div>
     <p>&copy; 2025 StoragePro. All rights reserved.</p>
-</footer>
+  </footer>
 </body>
 </html>
