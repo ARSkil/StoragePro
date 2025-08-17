@@ -1,144 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Garden Barn - StoragePro</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Premier Barn Garage - StoragePro</title>
   <style>
-    body {
-      font-family: 'Roboto', sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f9f9f9;
-      color: #333;
-      text-align: center;
+    /* Global styles (consistent with other product pages) */
+    :root{
+      --bg:#f4f4f4;
+      --panel:#ffffff;
+      --muted:#555;
+      --accent:#0069c0;
+      --accent-cta:#4CAF50;
+      --header:#222;
+      --shadow: 0 6px 18px rgba(0,0,0,0.10);
+      --max-width:1000px;
+      --card-width:800px;
+      font-family: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
     }
 
-    header {
-      background: #333;
-      color: white;
-      padding: 15px 0;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 15px 10%;
+    html,body{height:100%;margin:0;background:var(--bg);color:#333}
+    body{display:flex;flex-direction:column;min-height:100vh}
+
+    /* Header */
+    header{
+      width:100%;
+      background:var(--header);
+      color:#fff;
+      padding:16px 28px;
+      box-sizing:border-box;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+    }
+    .logo{font-weight:700;font-size:1.25rem}
+    nav{display:flex;gap:18px}
+    nav a{color:#fff;text-decoration:none;font-weight:500}
+    nav a.active{border-bottom:2px solid #ff9800;padding-bottom:2px}
+
+    /* Main layout */
+    main{flex:1;display:flex;flex-direction:column;align-items:center;padding:36px 20px;box-sizing:border-box;max-width:var(--max-width);margin:0 auto;width:100%}
+
+    .product-detail-card{
+      width:100%;
+      max-width:var(--card-width);
+      background:var(--panel);
+      border-radius:12px;
+      box-shadow:var(--shadow);
+      overflow:hidden;
+      margin-bottom:32px;
+      text-align:center;
     }
 
-    header .logo {
-      font-size: 1.5em;
-      font-weight: bold;
-    }
+    .product-detail-image img{width:100%;height:auto;display:block}
 
-    nav a {
-      color: white;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: 500;
-    }
+    .product-detail-info{padding:22px}
+    .product-detail-info h1{margin:0 0 10px;font-size:1.75rem;color:#222}
+    .product-detail-info p{margin:0 0 16px;color:var(--muted);line-height:1.6}
+    .product-detail-info ul{margin:0 auto 12px;padding-left:24px;text-align:left;max-width:680px;color:var(--muted);line-height:1.6}
+    .product-detail-info li{margin-bottom:8px}
 
-    nav a.active {
-      text-decoration: underline;
+    .actions{margin-top:14px}
+    .btn{
+      display:inline-block;
+      padding:10px 18px;
+      border-radius:6px;
+      text-decoration:none;
+      font-weight:600;
+      color:#fff;
+      background:var(--accent);
+      transition:transform .12s ease,background .12s ease;
     }
+    .btn:hover{transform:translateY(-3px)}
+    .btn.secondary{background:var(--accent-cta)}
 
-    .product-page {
-      max-width: 1000px;
-      margin: 40px auto;
-      background: white;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    }
+    /* Size / pricing section */
+    .product-page{width:100%;max-width:var(--max-width);margin:0 auto 48px;padding:0 20px;box-sizing:border-box;text-align:center}
+    .product-page .block{background:var(--panel);box-shadow:var(--shadow);border-radius:10px;padding:18px;margin-bottom:20px}
 
-    .product-image img {
-      width: 100%;
-      max-width: 800px;
-      border-radius: 10px;
-    }
+    table{width:100%;max-width:900px;margin:18px auto;border-collapse:collapse;background:var(--panel);box-shadow:none}
+    th,td{border:1px solid #ddd;padding:10px;font-size:0.95rem}
+    thead th{background:#f2f2f2}
+    table td{color:var(--muted)}
+    .note{color:var(--muted);margin-top:12px}
 
-    .product-info h2 {
-      margin-top: 20px;
-      font-size: 2em;
-      color: #222;
-    }
+    /* Footer */
+    footer{background:var(--header);color:#aaa;padding:18px 20px;text-align:center;margin-top:auto}
+    footer a{color:#aaa;margin:0 8px;text-decoration:none}
+    footer a:hover{color:#fff}
 
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 20px;
-    }
-
-    th, td {
-      border: 1px solid #ddd;
-      padding: 10px;
-    }
-
-    th {
-      background: #f2f2f2;
-    }
-
-    .back-button {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 10px 20px;
-      background: #4CAF50;
-      color: white;
-      text-decoration: none;
-      border-radius: 5px;
-      transition: background 0.3s ease;
-    }
-
-    .back-button:hover {
-      background: #45a049;
-    }
-
-    footer {
-      margin-top: 40px;
-      padding: 20px;
-      background: #333;
-      color: white;
-    }
-
-    footer a {
-      color: #4CAF50;
-      margin: 0 10px;
-      text-decoration: none;
+    /* Responsive */
+    @media (max-width:760px){
+      nav{gap:12px}
+      .product-detail-info ul{padding-left:20px}
+      table, th, td{font-size:0.9rem}
+      .product-detail-card{border-radius:8px}
     }
   </style>
 </head>
 <body>
-
-  <!-- Header -->
+  <!-- Header (pages likely live under /pages/ so adjust links if root) -->
   <header>
     <div class="logo">StoragePro</div>
     <nav>
-      <a href="index.html">Home</a>
-      <a href="services.html">Services</a>
-      <a href="products.html" class="active">Products</a>
-      <a href="contact.html">Contact</a>
+      <a href="../index.html">Home</a>
+      <a href="../services.html">Services</a>
+      <a href="../products.html" class="active">Products</a>
+      <a href="../contact.html">Contact</a>
     </nav>
   </header>
 
-  <!-- Product Section -->
-  <section class="product-page">
-    <div class="product-image">
-      <img src="https://www.tuffshed.com/wp-content/uploads/2016/12/12x24-Premier-Barn-Garage_VIEW01.RGB_color.0000.png" alt="Large Shed">
-    </div>
+  <!-- Product hero -->
+  <main>
+    <article class="product-detail-card" aria-labelledby="product-title">
+      <div class="product-detail-image">
+        <!-- Large image (from source) -->
+        <img src="https://www.tuffshed.com/wp-content/uploads/products/3DModels/Premier-Barn-Garage_medium.jpg" alt="Premier Barn Garage">
+      </div>
 
-    <div class="product-info">
-      <h2>Large Sheds</h2>
-      <p>High-capacity sheds with customizable painted finish options. Give your vehicles their own Tuff Shed with this barn style garage. Choose from standard or custom designs to match your home. Even add a large overhead loft. Concrete is required but not included in the price.</p>
+      <div class="product-detail-info">
+        <h1 id="product-title">Premier Barn Garage</h1>
+        <p>
+          The Premier Barn Garage blends classic barn styling with garage functionality. Built on the Premier series platform,
+          it offers tall sidewalls, a sturdy floor system and options for garage doors, lofts and windows — great for vehicles,
+          equipment storage or a workshop.
+        </p>
+
         <ul>
-          <li>Barn Style 5/12 Roof Pitch & 3-Tab Shingles</li>
-          <li>8’1″ Clear Interior Wall Height</li>
-          <li>LP SilverTech Radiant Barrier Siding & 2×4 Wall Studs Spaced 16″ On Center</li>
-          <li>3’x6’8″ 6-panel Residential Door</li>
-          <li>No Sidewall Eave</li>
+          <li>Barn roof style with 5/12 pitch and dimensional shingles</li>
+          <li>Approximately 6'8" clear sidewall height (varies by model)</li>
+          <li>LP SilverTech / SmartSide siding, 2×4 studs at 16" on center (model-dependent)</li>
+          <li>Options for overhead garage door, side personnel door, windows and loft</li>
+          <li>Engineered floor and reinforced framing for vehicle loads</li>
         </ul>
-      <table>
+
+        <div class="actions">
+          <a class="btn" href="../products.html">Back to Products</a>
+          <a class="btn secondary" href="../contact.html" style="margin-left:12px">Request Quote</a>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <!-- Sizes & Pricing -->
+  <section class="product-page">
+    <div class="block">
+      <h2>Available Sizes & Sample Pricing</h2>
+      <p class="note">Prices shown are examples. Final pricing depends on options, location and current promotions. Use Build-A-Quote or contact us for a firm price.</p>
+
+      <table aria-label="Premier Barn Garage sample pricing">
         <thead>
           <tr>
-            <th>W x L x H</th>
+            <th>W × L × H</th>
             <th>Base Price</th>
             <th>Painted Price</th>
           </tr>
@@ -186,16 +199,19 @@
         </tbody>
       </table>
 
-      <p style="margin-top:20px;">All large sheds come with reinforced siding, heavy-duty doors, and optional paint finishes.</p>
-
-      <a href="../products.html" class="back-button">Back to Products</a>
+      <p class="note">Need a garage door installed? We can quote overhead door options and installation. Delivery and installation fees vary by region.</p>
     </div>
   </section>
 
+  <!-- Footer -->
   <footer>
-    <div><a href="#">Facebook</a> <a href="#">Instagram</a> <a href="#">LinkedIn</a></div>
+    <div>
+      <a href="#">Facebook</a> ·
+      <a href="#">Instagram</a> ·
+      <a href="#">LinkedIn</a>
+    </div>
     <p>&copy; 2025 StoragePro. All rights reserved.</p>
   </footer>
-
 </body>
 </html>
+
