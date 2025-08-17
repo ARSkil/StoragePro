@@ -1,42 +1,210 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Premier Tall Ranch - StoragePro</title>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Premier PRO Tall Barn - StoragePro</title>
+  <style>
+    /* Global page styles */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    /* Header */
+    header {
+      background-color: #222;
+      color: #fff;
+      padding: 15px 30px;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-sizing: border-box;
+    }
+    header .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+    header nav {
+      display: flex;
+      gap: 20px;
+    }
+    header nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    header nav a.active {
+      border-bottom: 2px solid #ff9800;
+    }
+
+    /* Main wrappers */
+    main, .product-page {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+      box-sizing: border-box;
+    }
+
+    /* Product card */
+    .product-detail-card {
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      width: 100%;
+      max-width: 800px;
+    }
+    .product-detail-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .product-detail-info {
+      padding: 20px;
+    }
+    .product-detail-info h1 {
+      margin-top: 0;
+      font-size: 2rem;
+      color: #222;
+    }
+    .product-detail-info p {
+      margin: 15px 0;
+      color: #555;
+      line-height: 1.6;
+    }
+    .product-detail-info ul {
+      list-style: disc;
+      padding-left: 40px;
+      text-align: left;
+      margin: 20px auto;
+      color: #555;
+      line-height: 1.6;
+      max-width: 600px;
+    }
+    .product-detail-info ul li {
+      margin-bottom: 10px;
+    }
+
+    /* Buttons */
+    .back-button {
+      display: inline-block;
+      margin: 20px auto;
+      padding: 10px 20px;
+      background-color: #0069c0;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: 500;
+      transition: background-color 0.2s ease;
+    }
+    .back-button:hover {
+      background-color: #00509e;
+    }
+
+    /* Table */
+    table {
+      width: 80%;
+      margin: 20px auto;
+      border-collapse: collapse;
+      text-align: center;
+      background: #fff;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    }
+    table th, table td {
+      border: 1px solid #ccc;
+      padding: 10px;
+    }
+    table thead {
+      background-color: #f2f2f2;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #222;
+      color: #aaa;
+      width: 100%;
+      margin-top: auto;
+    }
+    footer a {
+      color: #aaa;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
-  <!-- Header -->
-    <header>
-        <div class="logo">StoragePro</div>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="services.html">Services</a>
-            <a href="products.html" class="active">Products</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-    </header>
-<section class="product-page">
-  <div class="product-image">
-    <img src="https://www.tuffshed.com/wp-content/uploads/products/3DModels/Your-Shed-Image9.jpg" alt="Shed Name" style="width:100%; max-width:800px; margin:auto; display:block;">
-  </div>
+  <!-- Header (product pages live in /pages, so use ../ for nav links) -->
+  <header>
+    <div class="logo">StoragePro</div>
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="../services.html">Services</a>
+      <a href="../products.html" class="active">Products</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+  </header>
 
-  <div class="product-info">
-    <h2>Shed Name</h2>
-    <p>High-quality shed available in multiple sizes. Choose your preferred dimensions and finish.</p>
+  <!-- Product hero -->
+  <main>
+    <div class="product-detail-card">
+      <div class="product-detail-image">
+        <img src="https://www.tuffshed.com/wp-content/uploads/2017/02/10X16-PREMIER-PRO-TALL-BARN.png" alt="Premier PRO Tall Barn">
+      </div>
+      <div class="product-detail-info">
+        <h1>Premier PRO Tall Barn</h1>
+        <p>
+          A high-capacity barn-style shed from the PRO Series, delivering extra headroom and storage versatility.
+          Ideal for lofts, tall shelving, or larger equipment needing added vertical space.
+        </p>
+        <ul>
+          <li>Barn style roof with 5/12 pitch & 3-tab shingles</li>
+          <li>Approx. 7′10″ clear sidewall height for more vertical storage</li>
+          <li>LP SmartSide® siding; 2×4 studs spaced 16″ on center</li>
+          <li>Heavy-duty steel-reinforced door set; residential-grade hardware</li>
+          <li>Engineered floor system; soffited eaves and continuous ridge ventilation</li>
+        </ul>
+        <a href="../products.html" class="back-button">Back to Products</a>
+      </div>
+    </div>
+  </main>
 
-    <table border="1" cellspacing="0" cellpadding="8" style="width:100%; border-collapse: collapse; margin-top:20px;">
-      <thead style="background-color:#f2f2f2;">
-        <tr>
-          <th>W x L x H</th>
-          <th>Base Price</th>
-          <th>Painted Price</th>
-        </tr>
-      </thead>
-      <tbody>
+  <!-- Size/price section -->
+  <section class="product-page">
+    <div class="product-info" style="text-align:center;">
+      <h2>Available Sizes & Sample Pricing</h2>
+      <p>Pricing varies by region and options. The table below shows example base pricing.</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>W × L × H (approx.)</th>
+            <th>Base Price</th>
+            <th>Painted Price</th>
+          </tr>
+        </thead>
+        <tbody>
         <tr><td>8' X 8' X 12'6"</td><td>$4,189.00</td><td>$4,712.63</td></tr>
         <tr><td>8' X 10' X 12'6"</td><td>$4,695.00</td><td>$5,281.88</td></tr>
         <tr><td>8' X 12' X 12'6"</td><td>$5,190.00</td><td>$5,838.75</td></tr>
@@ -55,18 +223,24 @@
         <tr><td>12' X 32' X 14'6"</td><td>$13,300.00</td><td>$14,962.50</td></tr>
         <tr><td>16' X 20' X 16'6"</td><td>$12,591.00</td><td>$14,164.88</td></tr>
         <tr><td>16' X 24' X 16'6"</td><td>$14,413.00</td><td>$16,214.63</td></tr>
-      </tbody>
-    </table>
+        </tbody>
+      </table>
 
-    <p style="margin-top:20px;">All sheds come with durable siding, customizable doors, and optional paint finishes.</p>
+      <p>Need a custom size or window/loft/door configuration? We’ll tailor it for you.</p>
+      <a href="../products.html" class="back-button" style="background-color:#4CAF50;">Back to Products</a>
+    </div>
+  </section>
 
-    <a href="../products.html" class="back-button" style="display:inline-block; margin-top:20px; padding:10px 20px; background-color:#4CAF50; color:white; text-decoration:none; border-radius:5px;">Back to Products</a>
-  </div>
-</section>
-
-<footer>
-    <div><a href="#">Facebook</a> <a href="#">Instagram</a> <a href="#">LinkedIn</a></div>
+  <!-- Footer -->
+  <footer>
+    <div>
+      <a href="#">Facebook</a>
+      <a href="#">Instagram</a>
+      <a href="#">LinkedIn</a>
+    </div>
     <p>&copy; 2025 StoragePro. All rights reserved.</p>
-</footer>
+  </footer>
 </body>
 </html>
+
+
