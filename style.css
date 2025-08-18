@@ -20,9 +20,12 @@ img {
 body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: url('pictures/background1.jpg') no-repeat center center fixed;
-      background-size: cover;
       color: #333;
+      background-image: url("pictures/background1.jpg");
+      background-size: cover;        /* чтобы картинка растягивалась */
+      background-repeat: no-repeat;  /* без повторения */
+      background-attachment: fixed;  /* фон закреплён */
+      background-position: center;   /* центрируем */
     }
 
     .overlay {
