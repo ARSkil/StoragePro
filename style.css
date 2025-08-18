@@ -5,11 +5,11 @@
     box-sizing: border-box;
 }
 body {
-    background-image: url("pictures/background1.jpg"); /* проверь путь! */
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
+    background-image: url("pictures/background1.jpg");
+    background-size: cover;        /* картинка растягивается на весь экран */
+    background-repeat: no-repeat;  /* не повторяется */
+    background-attachment: fixed;  /* фон закреплён при скролле */
+    background-position: center;   /* центрирование картинки */
     margin: 0;
     font-family: 'Roboto', sans-serif; /* оставим Roboto */
     line-height: 1.6;
