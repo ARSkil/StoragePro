@@ -224,6 +224,23 @@ section h2 {
     background-color: #f4f4f4;
 }
 
+/* Отступ перед блоками продуктов */
+#products h3 {
+    margin-top: 60px; /* расстояние сверху перед каждым блоком */
+    margin-bottom: 20px; /* расстояние между заголовком и карточками */
+    color: #2c3e50;
+    font-size: 28px;
+    text-align: left; /* или center, если нужно */
+}
+
+/* Отступ между сетками */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px; /* расстояние между карточками */
+    margin-bottom: 40px; /* расстояние между блоками сеток */
+}
+
 
 /* Contact */
 .contact form {
