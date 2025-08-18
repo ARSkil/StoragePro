@@ -5,16 +5,16 @@
     box-sizing: border-box;
 }
 body {
-    margin: 0;
-    font-family: 'Roboto', sans-serif; /* оставим Roboto */
-    line-height: 1.6;
-    color: #333;
     background-image: url("pictures/background1.jpg"); /* проверь путь! */
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
-}
+    margin: 0;
+    font-family: 'Roboto', sans-serif; /* оставим Roboto */
+    line-height: 1.6;
+    color: #333;
+    }
 a {
     text-decoration: none;
     color: inherit;
