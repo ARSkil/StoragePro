@@ -361,9 +361,21 @@ footer p {
     }
     .hero p {
         font-size: 18px;
-    }
 }
 /* Smooth scroll for anchor links */
 html {
     scroll-behavior: smooth;
+}
+.price-cell {
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.price-cell:hover {
+  background-color: #f0f0f0;
+}
+
+.selected-price {
+  background-color: #ffe08a !important;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
 }
