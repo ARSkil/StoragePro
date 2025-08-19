@@ -142,6 +142,23 @@ section h2 {
     font-size: 36px;
     color: #2c3e50;
 }
+.block1 {
+    position: relative; /* чтобы секция могла быть поверх */
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
+
+.block1 img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;        /* растянем по ширине */
+    height: 100%;       /* растянем по высоте */
+    object-fit: cover;  /* обрезка, если картинка не совпадает по пропорциям */
+    z-index: -1;        /* отправим под секцию */
+}
 
 /* Services */
 .services {
