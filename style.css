@@ -145,10 +145,11 @@ section h2 {
 .block1 {
     position: relative;
     width: 100%;
-    height: 400px; /* фиксированная высота блока, можешь поменять под нужный размер */
+    height: 400px; /* высота фонового блока */
     margin: 0;
     padding: 0;
-    overflow: hidden; /* чтобы картинка не вылезала за пределы */
+    overflow: hidden;
+    z-index: 0; /* фон ниже секций */
 }
 
 .block1 img {
@@ -157,10 +158,9 @@ section h2 {
     left: 0;
     width: 100%;        
     height: 100%;       
-    object-fit: cover;  /* растягивает без искажения пропорций */
-    z-index: -1;        
+    object-fit: cover;  
+    z-index: -1;  /* делает картинку нижним слоем */
 }
-
 
 /* Services */
 .services {
