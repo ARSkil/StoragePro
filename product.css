@@ -133,4 +133,18 @@
     footer a:hover {
       text-decoration: underline;
     }
+    .price-cell {
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+    }
+
+    .price-cell:hover {
+  background: #f0f0f0;
+    }
+
+    .price-cell.selected-price {
+  background: #4CAF50;
+  color: white;
+  font-weight: bold;
+    }
   </style>
