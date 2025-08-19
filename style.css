@@ -117,6 +117,18 @@ nav a:hover {
 .hero .btn:hover {
     background: #d35400;
 }
+.image-block {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.image-block .block-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px; /* скругление углов */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2); /* легкая тень */
+}
+
 
 /* Sections */
 section {
