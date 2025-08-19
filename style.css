@@ -53,6 +53,10 @@ img {
       font-size: 1.05em;
       margin-bottom: 8px;
     }
+/* Shadow for all blocks */
+section, .service-card, .step, .block1, .hero-overlay, .product-image img, .contact form {
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
 
 /* Header */
 header {
