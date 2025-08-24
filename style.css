@@ -66,12 +66,19 @@ p {
     line-height: 1.6;
 }
 .text-bg {
-    background: rgba(255, 255, 255, 0.85); /* белый полупрозрачный фон */
-    padding: 10px 20px;
-    border-radius: 8px;
-    margin: 20px 0;
-    display: inline-block; /* чтобы фон подстраивался под текст */
+    background: rgba(255, 255, 255, 0.85); /* белый полупрозрачный */
+    display: inline-block;                 /* фон только под текст */
+    padding: 6px 12px;
+    border-radius: 6px;
+    margin: 20px 0;                        /* отступы сверху и снизу */
 }
+
+.text-bg h2,
+.text-bg h3,
+.text-bg p {
+    margin: 0;   /* убираем лишние внутренние отступы */
+}
+
 
 /* General blocks styling */
 section {
