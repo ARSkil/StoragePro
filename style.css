@@ -65,6 +65,13 @@ p {
     font-size: 1.1em;
     line-height: 1.6;
 }
+.text-bg {
+    background: rgba(255, 255, 255, 0.85); /* белый полупрозрачный фон */
+    padding: 10px 20px;
+    border-radius: 8px;
+    margin: 20px 0;
+    display: inline-block; /* чтобы фон подстраивался под текст */
+}
 
 /* General blocks styling */
 section {
