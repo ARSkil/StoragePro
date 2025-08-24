@@ -66,19 +66,20 @@ p {
     line-height: 1.6;
 }
 .text-bg {
-    background: rgba(255, 255, 255, 0.85); /* белый полупрозрачный */
-    display: inline-block;                 /* фон только под текст */
-    padding: 6px 12px;
+    background: rgba(255, 255, 255, 0.85);
+    display: block;              /* всегда новая строка */
+    width: fit-content;          /* фон подстраивается под текст */
+    margin: 30px auto;           /* центрируем */
+    padding: 6px 14px;
     border-radius: 6px;
-    margin: 20px 0;                        /* отступы сверху и снизу */
+    text-align: center;
 }
 
 .text-bg h2,
 .text-bg h3,
 .text-bg p {
-    margin: 0;   /* убираем лишние внутренние отступы */
+    margin: 0;
 }
-
 
 /* General blocks styling */
 section {
