@@ -136,6 +136,29 @@ table td {
 table thead {
   background-color: #f2f2f2;
 }
+.price-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.price-table th, .price-table td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: center;
+}
+
+.price-table button {
+    padding: 6px 12px;
+    border: none;
+    background: #4CAF50;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+}
+.price-table button:hover {
+    background: #45a049;
+}
 
 footer {
   text-align: center;
