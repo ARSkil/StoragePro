@@ -19,3 +19,22 @@ document.querySelectorAll(".price-cell").forEach(cell => {
     }
   });
 });
+// корзина
+function loadCart() {
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    document.getElementById("cart-count").textContent = cart.length;
+    return cart;
+}
+
+function saveCart(cart) {
+    localStorage.setItem("cart", JSON.stringify(cart));
+    document.getElementById("cart-count").textContent = cart.length;
+}
+
+function addToCart(name, price) {
+    let cart = loadCart();
+    cart.push({ name, price });
+    saveCart(cart);
+    alert(name + " added to cart!");
+}
+document.addEventListener("DOMContentLoaded", loadCart);
