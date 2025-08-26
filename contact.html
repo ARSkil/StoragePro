@@ -10,13 +10,15 @@
 <body>
 
 <header>
-  <div class="logo">StoragePro</div>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="services.html">Services</a>
-    <a href="products.html">Products</a>
-    <a href="contact.html" class="active">Contact</a>
-  </nav>
+  <div id="nav-placeholder"></div>
+<script>
+  fetch("nav.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("nav-placeholder").innerHTML = data;
+    });
+</script>
+
 </header>
 
 <!-- Начало overlay -->
