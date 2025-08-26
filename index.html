@@ -9,17 +9,9 @@
 </head>
 <body>
 
-<header>
-    <div id="nav-placeholder"></div>
-<script>
-  fetch("nav.html")
-    .then(res => res.text())
-    .then(data => {
-      document.getElementById("nav-placeholder").innerHTML = data;
-    });
-</script>
+<div id="nav-placeholder"></div>
+<script src="/nav.js" defer></script>
 
-</header>
 
 <main>
     <section class="hero">
