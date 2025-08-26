@@ -8,18 +8,8 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-<header>
   <div id="nav-placeholder"></div>
-<script>
-  fetch("nav.html")
-    .then(res => res.text())
-    .then(data => {
-      document.getElementById("nav-placeholder").innerHTML = data;
-    });
-</script>
-
-</header>
+  <script src="/nav.js" defer></script>
 
 <!-- Начало overlay -->
 <div class="overlay">
