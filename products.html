@@ -11,14 +11,7 @@
 
 <header>
     <div id="nav-placeholder"></div>
-<script>
-  fetch("nav.html")
-    .then(res => res.text())
-    .then(data => {
-      document.getElementById("nav-placeholder").innerHTML = data;
-    });
-</script>
-
+    <script src="/nav.js" defer></script>
 </header>
 
 <main>
