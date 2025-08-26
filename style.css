@@ -122,6 +122,29 @@ header nav a.active {
 header nav a:hover {
     color: #ff9800;
 }
+header nav a.active {
+  border-bottom: 2px solid #ff9800;
+  color: #ff9800;
+}
+
+.cart-link {
+  position: relative;
+  padding-right: 26px;
+}
+
+.cart-badge {
+  position: absolute;
+  top: -6px;
+  right: 0;
+  font-size: 12px;
+  min-width: 18px;
+  line-height: 18px;
+  text-align: center;
+  border-radius: 9px;
+  background: #ff9800;
+  color: #fff;
+  padding: 0 6px;
+}
 
 /* Hero Section */
 .hero {
