@@ -6,35 +6,46 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <!-- Навигация -->
     <div id="nav-placeholder"></div>
-    <script src="/nav.js" defer></script>
 
-<main>
-    <h2>Your Cart</h2>
-    <table id="cart-table">
-        <tr>
-            <th>Product</th>
-            <th>Price</th>
-        </tr>
-    </table>
-    <h3 id="total"></h3>
-</main>
+    <main>
+        <h2>Your Cart</h2>
+        <table id="cart-table">
+            <tr>
+                <th>Product</th>
+                <th>Price</th>
+            </tr>
+        </table>
+        <h3 id="total"></h3>
+    </main>
 
-<script src="script.js"></script>
-<script>
-    function renderCart() {
-        let cart = loadCart();
-        let table = document.getElementById("cart-table");
-        let total = 0;
-        cart.forEach(item => {
-            let row = table.insertRow();
-            row.insertCell(0).textContent = item.name;
-            row.insertCell(1).textContent = "$" + item.price;
-            total += item.price;
-        });
-        document.getElementById("total").textContent = "Total: $" + total;
-    }
-    document.addEventListener("DOMContentLoaded", renderCart);
-</script>
-</body>
-</html>
+    <footer>
+        <div>
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+            <a href="#">LinkedIn</a>
+        </div>
+        <p>&copy; 2025 StoragePro. All rights reserved.</p>
+    </footer>
+
+    <!-- Скрипты -->
+    <script src="script.js"></script>
+    <script>
+        function renderCart() {
+            let cart = loadCart();
+            let table = document.getElementById("cart-table");
+            let total = 0;
+
+            cart.forEach(item => {
+                let row = table.insertRow();
+                row.insertCell(0).textContent = item.name;
+                row.insertCell(1).textContent = "$" + item.price;
+                total += item.price;
+            });
+
+            document.getElementById("total").textContent = "Total: $" + total;
+        }
+
+        document.addEventListener
