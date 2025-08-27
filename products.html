@@ -10,15 +10,28 @@
 <body>
 
   <!-- Навигация -->
-  <div id="header-placeholder"></div>
+ <div id="header-placeholder"></div>
 
 <script>
 fetch('header.html')
   .then(response => response.text())
   .then(html => {
     document.getElementById('header-placeholder').innerHTML = html;
+
+    // После вставки header задаём ссылки
+    const nav = document.getElementById('header-placeholder');
+
+    nav.querySelector('#navHome').href = 'index.html';
+    nav.querySelector('#navServices').href = 'services.html';
+    nav.querySelector('#navProducts').href = 'products.html';
+    nav.querySelector('#navContact').href = 'contact.html';
+    nav.querySelector('#navCart').href = 'cart.html';
+
+    // Можно здесь же обновлять счётчик корзины
+    // nav.querySelector('#navCartCount').textContent = localStorage.getItem('cartCount') || 0;
   });
 </script>
+
 
   <main>
     <section id="products">
