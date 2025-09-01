@@ -9,12 +9,60 @@
 <body>
     <header>
         <div class="logo">StoragePro</div>
-        <div id="nav-placeholder"></div>
+      <!-- Навигация вставляется сюда -->
+<div id="header-placeholder"></div>
 <script>
-  fetch("nav.html")
-    .then(res => res.text())
-    .then(data => {
-      document.getElementById("nav-placeholder").innerHTML = data;
+  fetch('../header.html')   // путь к header.html из подпапки products
+    .then(response => response.text())
+    .then(html => {
+      const nav = document.getElementById('header-placeholder');
+      nav.innerHTML = html;
+
+      // Назначаем ссылки
+      const links = {
+        navHome: '../index.html',
+        navServices: '../services.html',
+        navProducts: '../products.html',
+        navContact: '../contact.html',
+        navCart: '../cart.html'
+      };
+
+      for (const id in links) {
+        const el = nav.querySelector('#' + id);
+        if (!el) continue;
+        el.href = links[id];
+
+        // Подсветка текущей страницы
+        if (window.location.pathname.endsWith(links[id].replace('../',''))) {
+          el.classList.add('active');
+        }
+      }
+
+      // Функция обновления счётчика
+      function updateCartCount() {
+        const count = parseInt(localStorage.getItem('cartCount')) || 0;
+        const badge = nav.querySelector('#navCartCount');
+        if (badge) {
+          badge.textContent = count;
+          badge.style.transform = 'scale(1.3)';
+          setTimeout(() => { badge.style.transform = 'scale(1)'; }, 300);
+        }
+      }
+
+      updateCartCount();
+
+      // Слушаем изменения localStorage (если корзина обновляется на другой вкладке)
+      window.addEventListener('storage', (event) => {
+        if (event.key === 'cartCount') updateCartCount();
+      });
+
+      // Автоматическое обновление при добавлении товара на текущей странице
+      window.addToCart = function(quantity = 1) {
+        let count = parseInt(localStorage.getItem('cartCount')) || 0;
+        count += quantity;
+        localStorage.setItem('cartCount', count);
+        updateCartCount();
+      }
     });
 </script>
 
