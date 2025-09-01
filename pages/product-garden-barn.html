@@ -1,141 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../product.css">
-    <title>Garden Barn – StoragePro</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../product.css">
+  <title>Garden Barn – StoragePro</title>
 </head>
 <body>
-   <!-- Навигация вставляется сюда -->
-        <div id="header-placeholder"></div>
-        <script>
-          fetch('../header.html')   // путь к header.html из подпапки products
-            .then(response => response.text())
-            .then(html => {
-              const nav = document.getElementById('header-placeholder');
-              nav.innerHTML = html;
-        
-              // Назначаем ссылки
-              const links = {
-                navHome: '../index.html',
-                navServices: '../services.html',
-                navProducts: '../products.html',
-                navContact: '../contact.html',
-                navCart: '../cart.html'
-              };
-        
-              for (const id in links) {
-                const el = nav.querySelector('#' + id);
-                if (!el) continue;
-                el.href = links[id];
-        
-                // Подсветка текущей страницы
-                if (window.location.pathname.endsWith(links[id].replace('../',''))) {
-                  el.classList.add('active');
-                }
-              }    
-              // Функция обновления счётчика
-              function updateCartCount() {
-                const count = parseInt(localStorage.getItem('cartCount')) || 0;
-                const badge = nav.querySelector('#navCartCount');
-                if (badge) {
-                  badge.textContent = count;
-                  badge.style.transform = 'scale(1.3)';
-                  setTimeout(() => { badge.style.transform = 'scale(1)'; }, 300);
-                }
-              }
-        
-              updateCartCount();
-        
-              // Слушаем изменения localStorage (если корзина обновляется на другой вкладке)
-              window.addEventListener('storage', (event) => {
-                if (event.key === 'cartCount') updateCartCount();
-              });
-        
-              // Автоматическое обновление при добавлении товара на текущей странице
-              window.addToCart = function(quantity = 1) {
-                let count = parseInt(localStorage.getItem('cartCount')) || 0;
-                count += quantity;
-                localStorage.setItem('cartCount', count);
-                updateCartCount();
-              }
-            });
-        </script>
-    </header>
+  <!-- Навигация (header будет подгружен nav.js) -->
+  <div id="nav-placeholder"></div>
+  <script src="../nav.js" defer></script>
 
-    <main>
-        <section class="product-detail">
-            <div class="product-detail-card">
-                <div class="product-detail-image">
-                    <img src="https://www.tuffshed.com/wp-content/uploads/2016/12/10x10-Garden-Barn.png" alt="Garden Barn">
-                </div>
-                <div class="product-detail-info">
-                    <h1>Garden Barn</h1>
-                    <p>Our most affordable barn-style shed that delivers Tuff Shed quality for the budget-conscious customer.</p>
-                    <ul>
-                        <li>Barn Style 5/12 Roof Pitch & 3-Tab Shingles</li>
-                        <li>5' 8" Clear Interior Sidewall Height</li>
-                        <li>LP SmartSide Siding & 2×4 Wall Studs Spaced 24" On Center</li>
-                        <li>6' 2" Tall Shed Door Placed on End Wall</li>
-                        <li>3" Flat Sidewall Eave</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="product-pricing">
-                <h2>Available Sizes & Sample Pricing</h2>
-                <p>Pricing varies by region and options. The table below shows example base pricing.</p>
-                <table class="pricing-table">
-                    <thead>
-                        <tr>
-                            <th>W × L × H (approx.)</th>
-                            <th>Base Price</th>
-                            <th>Painted Price</th>
-                            <th>Action</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr><td>6' X 6' X 7'6"</td><td class="price-cell" data-price="1870">$1,870.00</td><td class="price-cell" data-price="2103.75">$2,103.75</td><td><button class="add-to-cart">Add to Cart</button></td></tr>
-                        <tr><td>6' X 8' X 7'6"</td><td class="price-cell" data-price="2192">$2,192.00</td><td class="price-cell" data-price="2466">$2,466.00</td><td><button class="add-to-cart">Add to Cart</button></td></tr>
-                        <tr><td>6' X 10' X 7'6"</td><td class="price-cell" data-price="2559">$2,559.00</td><td class="price-cell" data-price="2878.88">$2,878.88</td><td><button class="add-to-cart">Add to Cart</button></td></tr>
-                        <tr><td>6' X 12' X 7'6"</td><td class="price-cell" data-price="2903">$2,903.00</td><td class="price-cell" data-price="3265.88">$3,265.88</td><td><button class="add-to-cart">Add to Cart</button></td></tr>
-                        <tr><td>6' X 14' X 7'6"</td><td class="price-cell" data-price="3274">$3,274.00</td><td class="price-cell" data-price="3683.25">$3,683.25</td><td><button class="add-to-cart">Add to Cart</button></td></tr>
-                        <tr><td>6' X 16' X 7'6"</td><td class="price-cell" data-price="3604">$3,604.00</td><td class="price-cell" data-price="4054.50">$4,054.50</td><td><button class="add-to-cart">Add to Cart</button></td></tr>
-                        <tr><td>8' X 6' X 7'10"</td><td class="price-cell" data-price="2105">$2,105.00</td><td class="price-cell" data-price="2368.13">$2,368.13</td><td><button class="add-to-cart">Add to Cart</button></td></tr>
-                        <tr><td>8' X 8' X 7'10"</td><td class="price-cell" data-price="2469">$2,469.00</td><td class="price-cell" data-price="2777.63">$2,777.63</td><td><button class="add-to-cart">Add to Cart</button></td></tr>
-                        <tr><td>8' X 10' X 7'10"</td><td class="price-cell" data-price="2877">$2,877.00</td><td class="price-cell" data-price="3236.63">$3,236.63</td><td><button class="add-to-cart">Add to Cart</button></td></tr>
-                        <tr><td>8' X 12' X 7'10"</td><td class="price-cell" data-price="3280">$3,280.00</td><td class="price-cell" data-price="3690">$3,690.00</td><td><button class="add-to-cart">Add to Cart</button></td></tr>
-                        <tr><td>8' X 14' X 7'10"</td><td class="price-cell" data-price="3706">$3,706.00</td><td class="price-cell" data-price="4169.25">$4,169.25</td><td><button class="add-to-cart">Add to Cart</button></td></tr>
-                        <tr><td>8' X 16' X 7'10"</td><td class="price-cell" data-price="4067">$4,067.00</td><td class="price-cell" data-price="4575.38">$4,575.38</td><td><button class="add-to-cart">Add to Cart</button></td></tr>
-                        <tr><td>10' X 6' X 8'2"</td><td class="price-cell" data-price="2454">$2,454.00</td><td class="price-cell" data-price="2760.75">$2,760.75</td><td><button class="add-to-cart">Add to Cart</button></td></tr>
-                        <tr><td>10' X 8' X 8'2"</td><td class="price-cell" data-price="2881">$2,881.00</td><td class="price-cell" data-price="3241.13">$3,241.13</td><td><button class="add-to-cart">Add to Cart</button></td></tr>
-                        <tr><td>10' X 10' X 8'2"</td><td class="price-cell" data-price="3347">$3,347.00</td><td class="price-cell" data-price="3765.38">$3,765.38</td><td><button class="add-to-cart">Add to Cart</button></td></tr>
-                        <tr><td>10' X 12' X 8'2"</td><td class="price-cell" data-price="3807">$3,807.00</td><td class="price-cell" data-price="4282.88">$4,282.88</td><td><button class="add-to-cart">Add to Cart</button></td></tr>
-                        <tr><td>10' X 14' X 8'2"</td><td class="price-cell" data-price="4283">$4,283.00</td><td class="price-cell" data-price="4818.38">$4,818.38</td><td><button class="add-to-cart">Add to Cart</button></td></tr>
-                        <tr><td>10' X 15' X 8'1"</td><td class="price-cell" data-price="4438">$4,438.00</td><td class="price-cell" data-price="4992.75">$4,992.75</td><td><button class="add-to-cart">Add to Cart</button></td></tr>
-                        <tr><td>10' X 16' X 8'2"</td><td class="price-cell" data-price="4715">$4,715.00</td><td class="price-cell" data-price="5304.38">$5,304.38</td><td><button class="add-to-cart">Add to Cart</button></td></tr>
-                    </tbody>
-                </table>
-
-                <div id="selected-price-box">
-                    Selected Price: <span id="selected-price">—</span>
-                </div>
-                <p>All large sheds come with reinforced siding, heavy-duty doors, and optional paint finishes.</p>
-                <a href="../products.html" class="back-button">Back to Products</a>
-            </div>
-        </section>
-    </main>
-
-    <script src="script.js"></script>
-
-    <footer>
-        <div>
-            <a href="#">Facebook</a>
-            <a href="#">Instagram</a>
-            <a href="#">LinkedIn</a>
+  <main>
+    <section class="product-detail">
+      <div class="product-detail-card">
+        <div class="product-detail-image">
+          <img src="https://www.tuffshed.com/wp-content/uploads/2016/12/10x10-Garden-Barn.png" alt="Garden Barn">
         </div>
-        <p>&copy; 2025 StoragePro. All rights reserved.</p>
-    </footer>
+        <div class="product-detail-info">
+          <h1>Garden Barn</h1>
+          <p>Our most affordable barn-style shed that delivers Tuff Shed quality for the budget-conscious customer.</p>
+          <ul>
+            <li>Barn Style 5/12 Roof Pitch & 3-Tab Shingles</li>
+            <li>5' 8" Clear Interior Sidewall Height</li>
+            <li>LP SmartSide Siding & 2×4 Wall Studs Spaced 24" On Center</li>
+            <li>6' 2" Tall Shed Door Placed on End Wall</li>
+            <li>3" Flat Sidewall Eave</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="product-pricing">
+        <h2>Available Sizes & Sample Pricing</h2>
+        <p>Pricing varies by region and options. The table below shows example base pricing.</p>
+
+        <table class="pricing-table">
+          <thead>
+            <tr>
+              <th>W × L × H (approx.)</th>
+              <th>Base Price</th>
+              <th>Painted Price</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>6' X 6' X 7'6"</td><td class="price-cell" data-price="1870">$1,870.00</td><td class="price-cell" data-price="2103.75">$2,103.75</td><td><button class="add-to-cart">Add to Cart</button></td></tr>
+            <tr><td>6' X 8' X 7'6"</td><td class="price-cell" data-price="2192">$2,192.00</td><td class="price-cell" data-price="2466">$2,466.00</td><td><button class="add-to-cart">Add to Cart</button></td></tr>
+            <tr><td>6' X 10' X 7'6"</td><td class="price-cell" data-price="2559">$2,559.00</td><td class="price-cell" data-price="2878.88">$2,878.88</td><td><button class="add-to-cart">Add to Cart</button></td></tr>
+            <tr><td>6' X 12' X 7'6"</td><td class="price-cell" data-price="2903">$2,903.00</td><td class="price-cell" data-price="3265.88">$3,265.88</td><td><button class="add-to-cart">Add to Cart</button></td></tr>
+            <tr><td>6' X 14' X 7'6"</td><td class="price-cell" data-price="3274">$3,274.00</td><td class="price-cell" data-price="3683.25">$3,683.25</td><td><button class="add-to-cart">Add to Cart</button></td></tr>
+            <tr><td>6' X 16' X 7'6"</td><td class="price-cell" data-price="3604">$3,604.00</td><td class="price-cell" data-price="4054.50">$4,054.50</td><td><button class="add-to-cart">Add to Cart</button></td></tr>
+            <tr><td>8' X 6' X 7'10"</td><td class="price-cell" data-price="2105">$2,105.00</td><td class="price-cell" data-price="2368.13">$2,368.13</td><td><button class="add-to-cart">Add to Cart</button></td></tr>
+            <tr><td>8' X 8' X 7'10"</td><td class="price-cell" data-price="2469">$2,469.00</td><td class="price-cell" data-price="2777.63">$2,777.63</td><td><button class="add-to-cart">Add to Cart</button></td></tr>
+            <tr><td>8' X 10' X 7'10"</td><td class="price-cell" data-price="2877">$2,877.00</td><td class="price-cell" data-price="3236.63">$3,236.63</td><td><button class="add-to-cart">Add to Cart</button></td></tr>
+            <tr><td>8' X 12' X 7'10"</td><td class="price-cell" data-price="3280">$3,280.00</td><td class="price-cell" data-price="3690">$3,690.00</td><td><button class="add-to-cart">Add to Cart</button></td></tr>
+            <tr><td>8' X 14' X 7'10"</td><td class="price-cell" data-price="3706">$3,706.00</td><td class="price-cell" data-price="4169.25">$4,169.25</td><td><button class="add-to-cart">Add to Cart</button></td></tr>
+            <tr><td>8' X 16' X 7'10"</td><td class="price-cell" data-price="4067">$4,067.00</td><td class="price-cell" data-price="4575.38">$4,575.38</td><td><button class="add-to-cart">Add to Cart</button></td></tr>
+            <tr><td>10' X 6' X 8'2"</td><td class="price-cell" data-price="2454">$2,454.00</td><td class="price-cell" data-price="2760.75">$2,760.75</td><td><button class="add-to-cart">Add to Cart</button></td></tr>
+            <tr><td>10' X 8' X 8'2"</td><td class="price-cell" data-price="2881">$2,881.00</td><td class="price-cell" data-price="3241.13">$3,241.13</td><td><button class="add-to-cart">Add to Cart</button></td></tr>
+            <tr><td>10' X 10' X 8'2"</td><td class="price-cell" data-price="3347">$3,347.00</td><td class="price-cell" data-price="3765.38">$3,765.38</td><td><button class="add-to-cart">Add to Cart</button></td></tr>
+            <tr><td>10' X 12' X 8'2"</td><td class="price-cell" data-price="3807">$3,807.00</td><td class="price-cell" data-price="4282.88">$4,282.88</td><td><button class="add-to-cart">Add to Cart</button></td></tr>
+            <tr><td>10' X 14' X 8'2"</td><td class="price-cell" data-price="4283">$4,283.00</td><td class="price-cell" data-price="4818.38">$4,818.38</td><td><button class="add-to-cart">Add to Cart</button></td></tr>
+            <tr><td>10' X 15' X 8'1"</td><td class="price-cell" data-price="4438">$4,438.00</td><td class="price-cell" data-price="4992.75">$4,992.75</td><td><button class="add-to-cart">Add to Cart</button></td></tr>
+            <tr><td>10' X 16' X 8'2"</td><td class="price-cell" data-price="4715">$4,715.00</td><td class="price-cell" data-price="5304.38">$5,304.38</td><td><button class="add-to-cart">Add to Cart</button></td></tr>
+          </tbody>
+        </table>
+
+        <div id="selected-price-box">
+          Selected Price: <span id="selected-price">—</span>
+        </div>
+
+        <p>All large sheds come with reinforced siding, heavy-duty doors, and optional paint finishes.</p>
+        <a href="../products.html" class="back-button">Back to Products</a>
+      </div>
+    </section>
+  </main>
+
+  <script src="../script.js" defer></script>
+
+  <footer>
+    <div>
+      <a href="#">Facebook</a>
+      <a href="#">Instagram</a>
+      <a href="#">LinkedIn</a>
+    </div>
+    <p>&copy; 2025 StoragePro. All rights reserved.</p>
+  </footer>
 </body>
 </html>
