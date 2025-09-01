@@ -34,8 +34,7 @@
                 if (window.location.pathname.endsWith(links[id].replace('../',''))) {
                   el.classList.add('active');
                 }
-              }
-        
+              }    
               // Функция обновления счётчика
               function updateCartCount() {
                 const count = parseInt(localStorage.getItem('cartCount')) || 0;
