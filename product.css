@@ -9,37 +9,6 @@ body {
   min-height: 100vh;
 }
 
-header {
-  background-color: #222;
-  color: #fff;
-  padding: 15px 30px;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  box-sizing: border-box;
-}
-
-header .logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-
-header nav {
-  display: flex;
-  gap: 20px;
-}
-
-header nav a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-header nav a.active {
-  border-bottom: 2px solid #ff9800;
-}
-
 main,
 .product-page {
   flex: 1;
